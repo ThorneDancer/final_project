@@ -43,6 +43,14 @@
 		"oAP": "/everrain.html",
 		"oF": 0
 		},
+	"/faq.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/faq.html",
+		"oF": 0
+		},
 	"/gallery.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -193,6 +201,26 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/img/nav/arrow-down.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/nav/arrow-down.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/img/nav/arrow-up.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/nav/arrow-up.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/img/nav/full_logo.png": {
 		"ft": 32768,
@@ -586,6 +614,14 @@
 		"oF": 2,
 		"oS": 0,
 		"uL": 1
+		},
+	"/store.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/store.html",
+		"oF": 0
 		},
 	"/village.html": {
 		"cB": 0,

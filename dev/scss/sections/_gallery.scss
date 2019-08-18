@@ -1,0 +1,76 @@
+#gallery{
+    background-color: $background;
+    button{
+        background-color: $background;
+        border: none;
+        outline: none;
+        div{
+            background-image: url("../img/nav/logo.png");
+            height: 75px;
+            width: 75px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+#concept{
+    div{
+        ul{
+            li:nth-child(1){
+                background-image: url("../img/gallery/concept/concept_1.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 450px;
+                width: 100%;
+            }
+            li:nth-child(2){
+                background-image: url("../img/gallery/concept/concept_2.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 450px;
+                width: 100%;
+            }
+            li:nth-child(3){
+                background-image: url("../img/gallery/concept/concept_3.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 450px;
+                width: 100%;
+            }
+        }
+    }
+}
+#miniatures{
+    div{
+        ul{
+            li:nth-child(1){
+                background-image: url("../img/gallery/miniatures/mini_1.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 450px;
+                width: 100%;
+            }
+            li:nth-child(2){
+                background-image: url("../img/gallery/miniatures/mini_2.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 450px;
+                width: 100%;
+            }
+            li:nth-child(3){
+                background-image: url("../img/gallery/miniatures/mini_3.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 450px;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+#faq{
+    background-color: $background;
+    button{
+        background-color: $background;
+        border: none;
+        outline: none;
+        div{
+            background-image: url("../img/nav/logo.png");
+            height: 75px;
+            width: 75px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+#questions{
+    background-color: $background;
+    div{
+        ul{
+            li{
+                .arrow-down{
+                    background-image: url("../img/nav/arrow-down.svg");
+                    height: 14px;
+                    width: 23px;;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .arrow-up{
+                    background-image: url("../img/nav/arrow-up.svg");
+                    height: 14px;
+                    width: 23px;;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+}
+#faq-submit{
+    background-color: $background;
+}

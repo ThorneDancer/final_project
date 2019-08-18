@@ -1,0 +1,72 @@
+#store{
+    background-color: $background;
+    button{
+        background-color: $background;
+        border: none;
+        outline: none;
+        div{
+            background-image: url("../img/nav/logo.png");
+            height: 75px;
+            width: 75px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+#store-page{
+    div{
+        ul{
+            li:nth-child(1){
+                figure{
+                    background-image: url("../img/store/base_game.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 550px;
+                    width: 100%;
+                }
+            }
+            li:nth-child(2){
+                figure{
+                    background-image: url("../img/store/fear.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+            li:nth-child(3){
+                figure{
+                    background-image: url("../img/store/despair.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+            li:nth-child(4){
+                figure{
+                    background-image: url("../img/store/doom.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+            li:nth-child(5){
+                figure{
+                    background-image: url("../img/store/dread.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

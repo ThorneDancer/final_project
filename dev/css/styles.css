@@ -658,3 +658,153 @@ a:link {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
+
+#gallery {
+  background-color: #262626; }
+  #gallery button {
+    background-color: #262626;
+    border: none;
+    outline: none; }
+    #gallery button div {
+      background-image: url("../img/nav/logo.png");
+      height: 75px;
+      width: 75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+#concept div ul li:nth-child(1) {
+  background-image: url("../img/gallery/concept/concept_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  width: 100%; }
+
+#concept div ul li:nth-child(2) {
+  background-image: url("../img/gallery/concept/concept_2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  width: 100%; }
+
+#concept div ul li:nth-child(3) {
+  background-image: url("../img/gallery/concept/concept_3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  width: 100%; }
+
+#miniatures div ul li:nth-child(1) {
+  background-image: url("../img/gallery/miniatures/mini_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  width: 100%; }
+
+#miniatures div ul li:nth-child(2) {
+  background-image: url("../img/gallery/miniatures/mini_2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  width: 100%; }
+
+#miniatures div ul li:nth-child(3) {
+  background-image: url("../img/gallery/miniatures/mini_3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  width: 100%; }
+
+#store {
+  background-color: #262626; }
+  #store button {
+    background-color: #262626;
+    border: none;
+    outline: none; }
+    #store button div {
+      background-image: url("../img/nav/logo.png");
+      height: 75px;
+      width: 75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+#store-page div ul li:nth-child(1) figure {
+  background-image: url("../img/store/base_game.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  width: 100%; }
+
+#store-page div ul li:nth-child(2) figure {
+  background-image: url("../img/store/fear.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%; }
+
+#store-page div ul li:nth-child(3) figure {
+  background-image: url("../img/store/despair.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%; }
+
+#store-page div ul li:nth-child(4) figure {
+  background-image: url("../img/store/doom.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%; }
+
+#store-page div ul li:nth-child(5) figure {
+  background-image: url("../img/store/dread.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%; }
+
+#faq {
+  background-color: #262626; }
+  #faq button {
+    background-color: #262626;
+    border: none;
+    outline: none; }
+    #faq button div {
+      background-image: url("../img/nav/logo.png");
+      height: 75px;
+      width: 75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+#questions {
+  background-color: #262626; }
+  #questions div ul li .arrow-down {
+    background-image: url("../img/nav/arrow-down.svg");
+    height: 14px;
+    width: 23px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  #questions div ul li .arrow-up {
+    background-image: url("../img/nav/arrow-up.svg");
+    height: 14px;
+    width: 23px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+#faq-submit {
+  background-color: #262626; }
