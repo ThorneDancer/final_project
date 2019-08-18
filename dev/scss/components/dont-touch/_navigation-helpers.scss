@@ -1,0 +1,24 @@
+/* ===================
+    Navigation Helpers
+ =================== */
+
+/* overlay */
+.js-off-canvas-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100vw;
+    height: 100%;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    /* change the color of the overlay */
+    background-color: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}

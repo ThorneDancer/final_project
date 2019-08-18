@@ -311,9 +311,100 @@ template {
 /* =============
     Base
 ============= */
+h1, h2, h3, h4, h5, p, figure {
+  padding: 0;
+  margin: 0; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style: none; }
+
+a:link, a:visited {
+  text-decoration: none;
+  transition: 0.25s; }
+
+.project-grid {
+  display: grid;
+  grid-template-areas: ". content .";
+  grid-template-columns: 10px auto 10px; }
+  .project-grid > div {
+    grid-area: content; }
+
+body {
+  background-color: #262626; }
+
 /* =============
     Typography
 ============= */
+body {
+  font-family: 'Play', sans-serif; }
+
+p {
+  font-family: 'Blinker', sans-serif; }
+
+/* ===================
+    Navigation Helpers
+ =================== */
+/* overlay */
+.js-off-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100vw;
+  height: 100%;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  /* change the color of the overlay */
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden; }
+
+.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+/* =============
+    Off Canvas
+============= */
+main {
+  position: relative;
+  z-index: 10;
+  background-color: #fff; }
+
+#off-canvas-container {
+  background-color: #000;
+  display: grid;
+  grid-template-areas: ". off-canvas .";
+  grid-template-columns: 10px auto 10px;
+  padding-top: 20px;
+  width: 200px;
+  /* If you need padding or margin on the off-canvas menu, please add it to this div */ }
+  #off-canvas-container > div {
+    grid-area: off-canvas; }
+
+#off-canvas-container[data-navigation-slide="over"], #off-canvas-container[data-navigation-slide="push"] {
+  height: 100vh;
+  position: fixed;
+  z-index: 1000; }
+
+#off-canvas-container[data-navigation-slide="under"] {
+  height: 100vh;
+  position: fixed;
+  z-index: 5; }
+
+/* left */
+#off-canvas-container[data-navigation-position='left'] {
+  left: 0;
+  top: 0; }
+
+/* right */
+#off-canvas-container[data-navigation-position='right'] {
+  right: 0;
+  top: 0; }
+
 /* =============
     Buttons
 ============= */
@@ -335,9 +426,113 @@ textarea {
 /* =============
     Navigation
 ============= */
+a:hover,
+a:link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.25s; }
+
+#burger-icon {
+  background-color: #151515;
+  border: none;
+  font-size: 1.125rem;
+  outline: none;
+  padding: 8px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100; }
+
+#burger-icon:hover {
+  color: #fff; }
+
+#off-canvas-container {
+  /* -------------
+        Here are the properties you can changes for the off-canvas navigation-slide
+    ------------- */
+  background-color: #151515;
+  width: 80vw;
+  /* close btn */
+  /* close btn */ }
+  #off-canvas-container button {
+    background-color: #151515;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5625rem;
+    margin-bottom: 20px;
+    transition: 0.25s;
+    width: 100%; }
+  #off-canvas-container button:hover {
+    color: #fff; }
+  #off-canvas-container ul li {
+    margin-bottom: 20px; }
+    #off-canvas-container ul li a:link,
+    #off-canvas-container ul li a:visited {
+      color: #fff; }
+    #off-canvas-container ul li a:active,
+    #off-canvas-container ul li a:hover {
+      color: #fff; }
+
 /* =============
     Header
 ============= */
 /* =============
     Footer
 ============= */
+#home-page button {
+  background-color: #262626;
+  border: none;
+  outline: none; }
+  #home-page button div {
+    background-image: url("../img/nav/full_logo.png");
+    height: 375px;
+    width: 375px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  #home-page button h1 {
+    color: #fff;
+    letter-spacing: 0.25rem; }
+
+#village-attacks button {
+  background-color: #262626;
+  border: none;
+  outline: none; }
+  #village-attacks button div {
+    background-image: url("../img/nav/logo.png");
+    height: 75px;
+    width: 75px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+#village-hero {
+  background-image: url("../img/games/village_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%; }
+
+#village-content {
+  text-align: justify; }
+  #village-content figure {
+    background-image: url("../img/games/village_board.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%; }
+
+#village-video {
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+  grid-template-areas: ". video .";
+  height: 100vh; }
+  #village-video article {
+    grid-area: video;
+    padding: 20vh 0; }

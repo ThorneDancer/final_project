@@ -1,0 +1,57 @@
+#village-attacks{
+    button{
+        background-color: $background;
+        border: none;
+        outline: none;
+        div{
+            background-image: url("../img/nav/logo.png");
+            height: 75px;
+            width: 75px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+#village-hero{
+    background-image: url("../img/games/village_logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+}
+#village-content{
+    text-align: justify;
+    figure{
+        background-image: url("../img/games/village_board.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 100%;
+    }
+}
+#village-video{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". video .";
+    height: 100vh;
+
+    // @include md{
+    //     grid-template-columns: auto 70% auto;
+    // }
+    //
+    // @include lg{
+    //     grid-template-columns: auto 60% auto;
+    // }
+    //
+    // @include xl{
+    //     grid-template-columns: auto 50% auto;
+    // }
+
+    article{
+        grid-area: video;
+        padding: 20vh 0;
+    }
+}

@@ -10,12 +10,17 @@
 @import "base/_typography";
 
 // Components Styles
+@import "components/dont-touch/_navigation-helpers";
+@import "components/dont-touch/_off-canvas";
 @import "components/_buttons";
 @import "components/_forms";
 @import "components/_navigation";
+@import "components/_videoPlayer";
 
 // Layout Styles
 @import "layout/_header";
 @import "layout/_footer";
 
 // Sections Styles
+@import "sections/_home";
+@import "sections/_village";

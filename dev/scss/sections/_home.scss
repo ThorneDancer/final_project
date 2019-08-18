@@ -1,0 +1,19 @@
+#home-page{
+    button{
+        background-color: $background;
+        border: none;
+        outline: none;
+        div{
+            background-image: url("../img/nav/full_logo.png");
+            height: 375px;
+            width: 375px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            color: $white;
+            letter-spacing: rem-calc(4);
+        }
+    }
+}

@@ -1,0 +1,45 @@
+/* =============
+    Off Canvas
+============= */
+main{
+    position: relative;
+    z-index: 10;
+    background-color: $white;
+}
+
+#off-canvas-container {
+    background-color: $black;
+    display: grid;
+    grid-template-areas: ". off-canvas .";
+    grid-template-columns: 10px auto 10px;
+    padding-top: 20px;
+    // width of the off canvas navigation
+    width: 200px;
+    /* If you need padding or margin on the off-canvas menu, please add it to this div */
+    >div {
+        grid-area: off-canvas;
+    }
+}
+
+#off-canvas-container[data-navigation-slide="over"], #off-canvas-container[data-navigation-slide="push"] {
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+}
+
+#off-canvas-container[data-navigation-slide="under"] {
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+}
+
+/* left */
+#off-canvas-container[data-navigation-position='left'] {
+    left: 0;
+    top: 0;
+}
+/* right */
+#off-canvas-container[data-navigation-position='right'] {
+    right: 0;
+    top: 0;
+}
