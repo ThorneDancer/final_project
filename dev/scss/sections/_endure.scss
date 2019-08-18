@@ -1,4 +1,4 @@
-#village-attacks{
+#endure-stars{
     background-color: $background;
     button{
         background-color: $background;
@@ -14,45 +14,22 @@
         }
     }
 }
-#village-hero{
-    background-image: url("../img/games/village_logo.png");
+#endure-hero{
+    background-image: url("../img/games/endure_logo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 350px;
     width: 100%;
 }
-#village-content{
+#endure-content{
     text-align: justify;
     figure{
-        background-image: url("../img/games/village_board.png");
+        background-image: url("../img/games/endure_board.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 250px;
         width: 100%;
-    }
-}
-#village-video{
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-areas: ". video .";
-    height: 100vh;
-
-    // @include md{
-    //     grid-template-columns: auto 70% auto;
-    // }
-    //
-    // @include lg{
-    //     grid-template-columns: auto 60% auto;
-    // }
-    //
-    // @include xl{
-    //     grid-template-columns: auto 50% auto;
-    // }
-
-    article{
-        grid-area: video;
-        padding: 20vh 0;
     }
 }

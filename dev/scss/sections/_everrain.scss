@@ -1,4 +1,4 @@
-#village-attacks{
+#the-everrain{
     background-color: $background;
     button{
         background-color: $background;
@@ -14,26 +14,18 @@
         }
     }
 }
-#village-hero{
-    background-image: url("../img/games/village_logo.png");
+#everrain-hero{
+    background-image: url("../img/games/rain_logo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 350px;
     width: 100%;
 }
-#village-content{
+#everrain-content{
     text-align: justify;
-    figure{
-        background-image: url("../img/games/village_board.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 250px;
-        width: 100%;
-    }
 }
-#village-video{
+#everrain-video{
     display: grid;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". video .";

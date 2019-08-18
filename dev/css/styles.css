@@ -477,6 +477,30 @@ a:link {
     #off-canvas-container ul li a:hover {
       color: #fff; }
 
+/* ===================
+    Video Player
+=================== */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 75%;
+  /* 4:6 */
+  padding-top: 25px;
+  height: 0; }
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.widescreen {
+  padding-bottom: 56.25%;
+  /* 16:9 */ }
+
+/* ===================
+    End Video Player
+=================== */
 /* =============
     Header
 ============= */
@@ -498,17 +522,19 @@ a:link {
     color: #fff;
     letter-spacing: 0.25rem; }
 
-#village-attacks button {
-  background-color: #262626;
-  border: none;
-  outline: none; }
-  #village-attacks button div {
-    background-image: url("../img/nav/logo.png");
-    height: 75px;
-    width: 75px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+#village-attacks {
+  background-color: #262626; }
+  #village-attacks button {
+    background-color: #262626;
+    border: none;
+    outline: none; }
+    #village-attacks button div {
+      background-image: url("../img/nav/logo.png");
+      height: 75px;
+      width: 75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
 
 #village-hero {
   background-image: url("../img/games/village_logo.png");
@@ -536,3 +562,99 @@ a:link {
   #village-video article {
     grid-area: video;
     padding: 20vh 0; }
+
+#endure-stars {
+  background-color: #262626; }
+  #endure-stars button {
+    background-color: #262626;
+    border: none;
+    outline: none; }
+    #endure-stars button div {
+      background-image: url("../img/nav/logo.png");
+      height: 75px;
+      width: 75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+#endure-hero {
+  background-image: url("../img/games/endure_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%; }
+
+#endure-content {
+  text-align: justify; }
+  #endure-content figure {
+    background-image: url("../img/games/endure_board.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%; }
+
+#the-everrain {
+  background-color: #262626; }
+  #the-everrain button {
+    background-color: #262626;
+    border: none;
+    outline: none; }
+    #the-everrain button div {
+      background-image: url("../img/nav/logo.png");
+      height: 75px;
+      width: 75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+#everrain-hero {
+  background-image: url("../img/games/rain_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%; }
+
+#everrain-content {
+  text-align: justify; }
+
+#everrain-video {
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+  grid-template-areas: ". video .";
+  height: 100vh; }
+  #everrain-video article {
+    grid-area: video;
+    padding: 20vh 0; }
+
+#about {
+  background-color: #262626; }
+  #about button {
+    background-color: #262626;
+    border: none;
+    outline: none; }
+    #about button div {
+      background-image: url("../img/nav/logo.png");
+      height: 75px;
+      width: 75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+#members div ul li:nth-child(1) figure {
+  background-image: url("../img/about/adam.png");
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#members div ul li:nth-child(2) figure {
+  background-image: url("../img/about/mike.png");
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }

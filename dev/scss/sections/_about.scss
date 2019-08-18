@@ -1,0 +1,42 @@
+#about{
+    background-color: $background;
+    button{
+        background-color: $background;
+        border: none;
+        outline: none;
+        div{
+            background-image: url("../img/nav/logo.png");
+            height: 75px;
+            width: 75px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+#members{
+    div{
+        ul{
+            li:nth-child(1){
+                figure{
+                    background-image: url("../img/about/adam.png");
+                    height: 400px;
+                    width: 100%;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+            li:nth-child(2){
+                figure{
+                    background-image: url("../img/about/mike.png");
+                    height: 400px;
+                    width: 100%;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
