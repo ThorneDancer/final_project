@@ -109,22 +109,145 @@
         }
     }
 }
+// #endure-hero{
+//     background-image: url("../img/games/endure_logo.png");
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     height: 350px;
+//     width: 100%;
+// }
+// #endure-content{
+//     text-align: justify;
+//     figure{
+//         background-image: url("../img/games/endure_board.png");
+//         background-size: cover;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         height: 250px;
+//         width: 100%;
+//     }
+// }
 #endure-hero{
+    background-color: $background;
     background-image: url("../img/games/endure_logo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 350px;
+    height: 140px;
     width: 100%;
+    margin-top: 55px;
+
+    @include sm{
+        height: 180px;
+    }
+    @include md{
+        height: 240px;
+    }
+    @include lg{
+        height: 300px;
+    }
+    @include xl{
+        height: 390px;
+    }
 }
 #endure-content{
+    background-color: $background;
     text-align: justify;
+    margin-bottom: 40px;
+
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1170px auto;
+        grid-template-areas: ". endure-content .";
+    }
+    div{
+
+        @include xl{
+            grid-area: endure-content;
+        }
+    p{
+        color: $white;
+        line-height: rem-calc(24);
+
+        @include sm{
+            font-size: rem-calc(18);
+            line-height: rem-calc(28);
+        }
+        @include md{
+            font-size: rem-calc(20);
+            line-height: rem-calc(33);
+        }
+        @include lg{
+            text-align: left;
+            font-size: rem-calc(24);
+            line-height: rem-calc(38);
+        }
+    }
+    p:nth-child(2){
+
+        @include md{
+            width: 55%;
+        }
+    }
+    p:nth-child(4){
+
+        @include md{
+            width: 85%;
+        }
+        @include lg{
+            text-align: right;
+            width: 100%;
+        }
+    }
     figure{
         background-image: url("../img/games/endure_board.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 250px;
+        height: 240px;
         width: 100%;
+        margin: 0 0 10px;
+
+        @include sm{
+            height: 310px;
+        }
+        @include md{
+            height: 420px;
+            margin: -40px 0 -10px;
+        }
+        @include lg{
+            height: 525px;
+        }
+        @include xl{
+            height: 650px;
+        }
+    }
+    aside{
+        display: flex;
+        justify-content: center;
+
+        button{
+            font-size: rem-calc(25);
+            margin: 20px 0;
+
+            @include sm{
+                font-size: rem-calc(30);
+            }
+            @include lg{
+                font-size: rem-calc(35);
+            }
+            a{
+                color: $white;
+                border: 1px $white solid;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            a:hover,a:active{
+                color: $orange;
+                border-color: $orange;
+            }
+        }
+    }
     }
 }

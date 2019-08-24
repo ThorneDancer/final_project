@@ -701,31 +701,130 @@ a:link {
           width: 75%; } }
 
 #village-hero {
+  background-color: #262626;
   background-image: url("../img/games/village_logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
-  width: 100%; }
+  height: 290px;
+  width: 100%;
+  margin-top: 55px; }
+  @media (min-width: 549px) {
+    #village-hero {
+      height: 420px; } }
+  @media (min-width: 741px) {
+    #village-hero {
+      height: 500px; } }
+  @media (min-width: 950px) {
+    #village-hero {
+      height: 600px; } }
+  @media (min-width: 1176px) {
+    #village-hero {
+      height: 700px; } }
 
 #village-content {
+  background-color: #262626;
   text-align: justify; }
-  #village-content figure {
+  @media (min-width: 1176px) {
+    #village-content {
+      display: grid;
+      grid-template-columns: auto 1170px auto;
+      grid-template-areas: ". village-content ."; } }
+  @media (min-width: 1176px) {
+    #village-content div {
+      grid-area: village-content; } }
+  #village-content div p {
+    color: #fff;
+    line-height: 1.5rem; }
+    @media (min-width: 549px) {
+      #village-content div p {
+        font-size: 1.125rem;
+        line-height: 1.75rem; } }
+    @media (min-width: 741px) {
+      #village-content div p {
+        font-size: 1.25rem;
+        line-height: 2.0625rem; } }
+    @media (min-width: 950px) {
+      #village-content div p {
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 2.375rem; } }
+  @media (min-width: 741px) {
+    #village-content div p:nth-child(2) {
+      width: 55%; } }
+  @media (min-width: 741px) {
+    #village-content div p:nth-child(4) {
+      width: 85%; } }
+  @media (min-width: 950px) {
+    #village-content div p:nth-child(4) {
+      text-align: right;
+      width: 100%; } }
+  #village-content div figure {
     background-image: url("../img/games/village_board.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 250px;
-    width: 100%; }
+    height: 290px;
+    width: 100%;
+    margin: -10px 0 10px; }
+    @media (min-width: 549px) {
+      #village-content div figure {
+        height: 375px; } }
+    @media (min-width: 741px) {
+      #village-content div figure {
+        height: 500px;
+        margin: -40px 0 -10px; } }
+    @media (min-width: 950px) {
+      #village-content div figure {
+        height: 625px; } }
+    @media (min-width: 1176px) {
+      #village-content div figure {
+        height: 775px; } }
+  #village-content div aside {
+    display: flex;
+    justify-content: center; }
+    #village-content div aside button {
+      font-size: 1.5625rem;
+      margin: 20px 0; }
+      @media (min-width: 549px) {
+        #village-content div aside button {
+          font-size: 1.875rem; } }
+      @media (min-width: 950px) {
+        #village-content div aside button {
+          font-size: 2.1875rem; } }
+      #village-content div aside button a {
+        color: #fff;
+        border: 1px #fff solid;
+        border-radius: 10px;
+        padding: 10px; }
+      #village-content div aside button a:hover, #village-content div aside button a:active {
+        color: #D56B26;
+        border-color: #D56B26; }
 
 #village-video {
+  background-color: #262626;
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-areas: ". video .";
   height: 100vh; }
+  @media (min-width: 741px) {
+    #village-video {
+      grid-template-columns: auto auto 80% 10px;
+      grid-template-areas: ". . video ."; } }
+  @media (min-width: 950px) {
+    #village-video {
+      grid-template-columns: auto 80% auto;
+      grid-template-areas: ". video ."; } }
+  @media (min-width: 1176px) {
+    #village-video {
+      grid-template-columns: auto 70% auto; } }
   #village-video article {
     grid-area: video;
-    padding: 20vh 0; }
+    padding: 20px 0; }
+    @media (min-width: 741px) {
+      #village-video article {
+        padding: 0;
+        margin: -5px 0 0; } }
 
 #endure-stars {
   background-color: #262626; }
@@ -806,22 +905,106 @@ a:link {
           width: 75%; } }
 
 #endure-hero {
+  background-color: #262626;
   background-image: url("../img/games/endure_logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
-  width: 100%; }
+  height: 140px;
+  width: 100%;
+  margin-top: 55px; }
+  @media (min-width: 549px) {
+    #endure-hero {
+      height: 180px; } }
+  @media (min-width: 741px) {
+    #endure-hero {
+      height: 240px; } }
+  @media (min-width: 950px) {
+    #endure-hero {
+      height: 300px; } }
+  @media (min-width: 1176px) {
+    #endure-hero {
+      height: 390px; } }
 
 #endure-content {
-  text-align: justify; }
-  #endure-content figure {
+  background-color: #262626;
+  text-align: justify;
+  margin-bottom: 40px; }
+  @media (min-width: 1176px) {
+    #endure-content {
+      display: grid;
+      grid-template-columns: auto 1170px auto;
+      grid-template-areas: ". endure-content ."; } }
+  @media (min-width: 1176px) {
+    #endure-content div {
+      grid-area: endure-content; } }
+  #endure-content div p {
+    color: #fff;
+    line-height: 1.5rem; }
+    @media (min-width: 549px) {
+      #endure-content div p {
+        font-size: 1.125rem;
+        line-height: 1.75rem; } }
+    @media (min-width: 741px) {
+      #endure-content div p {
+        font-size: 1.25rem;
+        line-height: 2.0625rem; } }
+    @media (min-width: 950px) {
+      #endure-content div p {
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 2.375rem; } }
+  @media (min-width: 741px) {
+    #endure-content div p:nth-child(2) {
+      width: 55%; } }
+  @media (min-width: 741px) {
+    #endure-content div p:nth-child(4) {
+      width: 85%; } }
+  @media (min-width: 950px) {
+    #endure-content div p:nth-child(4) {
+      text-align: right;
+      width: 100%; } }
+  #endure-content div figure {
     background-image: url("../img/games/endure_board.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 250px;
-    width: 100%; }
+    height: 240px;
+    width: 100%;
+    margin: 0 0 10px; }
+    @media (min-width: 549px) {
+      #endure-content div figure {
+        height: 310px; } }
+    @media (min-width: 741px) {
+      #endure-content div figure {
+        height: 420px;
+        margin: -40px 0 -10px; } }
+    @media (min-width: 950px) {
+      #endure-content div figure {
+        height: 525px; } }
+    @media (min-width: 1176px) {
+      #endure-content div figure {
+        height: 650px; } }
+  #endure-content div aside {
+    display: flex;
+    justify-content: center; }
+    #endure-content div aside button {
+      font-size: 1.5625rem;
+      margin: 20px 0; }
+      @media (min-width: 549px) {
+        #endure-content div aside button {
+          font-size: 1.875rem; } }
+      @media (min-width: 950px) {
+        #endure-content div aside button {
+          font-size: 2.1875rem; } }
+      #endure-content div aside button a {
+        color: #fff;
+        border: 1px #fff solid;
+        border-radius: 10px;
+        padding: 10px; }
+      #endure-content div aside button a:hover, #endure-content div aside button a:active {
+        color: #D56B26;
+        border-color: #D56B26; }
 
 #the-everrain {
   background-color: #262626; }
@@ -902,24 +1085,101 @@ a:link {
           width: 75%; } }
 
 #everrain-hero {
+  background-color: #262626;
   background-image: url("../img/games/rain_logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
+  height: 110px;
   width: 100%; }
+  @media (min-width: 549px) {
+    #everrain-hero {
+      height: 140px; } }
+  @media (min-width: 741px) {
+    #everrain-hero {
+      height: 190px; } }
+  @media (min-width: 950px) {
+    #everrain-hero {
+      height: 230px; } }
+  @media (min-width: 1176px) {
+    #everrain-hero {
+      height: 290px; } }
 
 #everrain-content {
-  text-align: justify; }
+  text-align: justify;
+  background-color: #262626; }
+  @media (min-width: 1176px) {
+    #everrain-content {
+      display: grid;
+      grid-template-columns: auto 1170px auto;
+      grid-template-areas: ". everrain-content ."; } }
+  @media (min-width: 1176px) {
+    #everrain-content div {
+      grid-area: everrain-content; } }
+  #everrain-content div p {
+    color: #fff;
+    line-height: 1.5rem; }
+    @media (min-width: 549px) {
+      #everrain-content div p {
+        font-size: 1.125rem;
+        line-height: 1.75rem; } }
+    @media (min-width: 741px) {
+      #everrain-content div p {
+        font-size: 1.25rem;
+        line-height: 2.0625rem; } }
+    @media (min-width: 950px) {
+      #everrain-content div p {
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 2.375rem; } }
+  @media (min-width: 741px) {
+    #everrain-content div p:nth-child(2) {
+      width: 55%; } }
+  #everrain-content div aside {
+    display: flex;
+    justify-content: center; }
+    #everrain-content div aside button {
+      font-size: 1.5625rem;
+      margin: 20px 0; }
+      @media (min-width: 549px) {
+        #everrain-content div aside button {
+          font-size: 1.875rem; } }
+      @media (min-width: 950px) {
+        #everrain-content div aside button {
+          font-size: 2.1875rem; } }
+      #everrain-content div aside button a {
+        color: #fff;
+        border: 1px #fff solid;
+        border-radius: 10px;
+        padding: 10px; }
+      #everrain-content div aside button a:hover, #everrain-content div aside button a:active {
+        color: #D56B26;
+        border-color: #D56B26; }
 
 #everrain-video {
+  background-color: #262626;
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-areas: ". video .";
   height: 100vh; }
+  @media (min-width: 741px) {
+    #everrain-video {
+      grid-template-columns: auto auto 80% 10px;
+      grid-template-areas: ". . video ."; } }
+  @media (min-width: 950px) {
+    #everrain-video {
+      grid-template-columns: auto 80% auto;
+      grid-template-areas: ". video ."; } }
+  @media (min-width: 1176px) {
+    #everrain-video {
+      grid-template-columns: auto 70% auto; } }
   #everrain-video article {
     grid-area: video;
-    padding: 20vh 0; }
+    padding: 20px 0; }
+    @media (min-width: 741px) {
+      #everrain-video article {
+        padding: 0;
+        margin: -5px 0 0; } }
 
 #about {
   background-color: #262626; }

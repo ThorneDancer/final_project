@@ -110,36 +110,209 @@
     }
 }
 #everrain-hero{
+    background-color: $background;
     background-image: url("../img/games/rain_logo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 350px;
+    height: 110px;
     width: 100%;
+
+    @include sm{
+        height: 140px;
+    }
+    @include md{
+        height: 190px;
+    }
+    @include lg{
+        height: 230px;
+    }
+    @include xl{
+        height: 290px;
+    }
 }
 #everrain-content{
     text-align: justify;
+    background-color: $background;
+
+    @include xl{
+            display: grid;
+            grid-template-columns: auto 1170px auto;
+            grid-template-areas: ". everrain-content .";
+        }
+        div{
+
+            @include xl{
+                grid-area: everrain-content;
+            }
+        p{
+            color: $white;
+            line-height: rem-calc(24);
+
+            @include sm{
+                font-size: rem-calc(18);
+                line-height: rem-calc(28);
+            }
+            @include md{
+                font-size: rem-calc(20);
+                line-height: rem-calc(33);
+            }
+            @include lg{
+                text-align: left;
+                font-size: rem-calc(24);
+                line-height: rem-calc(38);
+            }
+        }
+        p:nth-child(2){
+
+            @include md{
+                width: 55%;
+            }
+        }
+        aside{
+            display: flex;
+            justify-content: center;
+
+            button{
+                font-size: rem-calc(25);
+                margin: 20px 0;
+
+                @include sm{
+                    font-size: rem-calc(30);
+                }
+                @include lg{
+                    font-size: rem-calc(35);
+                }
+                a{
+                    color: $white;
+                    border: 1px $white solid;
+                    border-radius: 10px;
+                    padding: 10px;
+                }
+                a:hover,a:active{
+                    color: $orange;
+                    border-color: $orange;
+                }
+            }
+        }
+        }
 }
+// #everrain-video{
+//     background-color: $background;
+//     display: grid;
+//     grid-template-columns: 10px auto 10px;
+//     grid-template-areas: ". video .";
+//     height: 100vh;
+//
+//     // @include md{
+//     //     grid-template-columns: auto 70% auto;
+//     // }
+//     //
+//     // @include lg{
+//     //     grid-template-columns: auto 60% auto;
+//     // }
+//     //
+//     // @include xl{
+//     //     grid-template-columns: auto 50% auto;
+//     // }
+//
+//     article{
+//         grid-area: video;
+//         padding: 20vh 0;
+//     }
+// }
+// #everrain-hero{
+//     background-color: $background;
+//     background-image: url("../img/games/rain_logo.png");
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     height: 290px;
+//     width: 100%;
+//     margin-top: 55px;
+//
+//     @include sm{
+//         height: 420px;
+//     }
+//     @include md{
+//         height: 500px;
+//     }
+//     @include lg{
+//         height: 600px;
+//     }
+//     @include xl{
+//         height: 700px;
+//     }
+// }
+// #everrain-content{
+//     background-color: $background;
+//     text-align: justify;
+//
+//     @include xl{
+//         display: grid;
+//         grid-template-columns: auto 1170px auto;
+//         grid-template-areas: ". everrain-content .";
+//     }
+//     div{
+//
+//         @include xl{
+//             grid-area: everrain-content;
+//         }
+//     p{
+//         color: $white;
+//         line-height: rem-calc(24);
+//
+//         @include sm{
+//             font-size: rem-calc(18);
+//             line-height: rem-calc(28);
+//         }
+//         @include md{
+//             font-size: rem-calc(20);
+//             line-height: rem-calc(33);
+//         }
+//         @include lg{
+//             text-align: left;
+//             font-size: rem-calc(24);
+//             line-height: rem-calc(38);
+//         }
+//     }
+//     p:nth-child(2){
+//
+//         @include md{
+//             width: 55%;
+//         }
+//     }
+//     }
+//     }
+// }
 #everrain-video{
+    background-color: $background;
     display: grid;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". video .";
     height: 100vh;
 
-    // @include md{
-    //     grid-template-columns: auto 70% auto;
-    // }
-    //
-    // @include lg{
-    //     grid-template-columns: auto 60% auto;
-    // }
-    //
-    // @include xl{
-    //     grid-template-columns: auto 50% auto;
-    // }
+    @include md{
+        grid-template-columns: auto auto 80% 10px;
+        grid-template-areas: ". . video .";
+    }
+
+    @include lg{
+        grid-template-columns: auto 80% auto;
+        grid-template-areas: ". video .";
+    }
+
+    @include xl{
+        grid-template-columns: auto 70% auto;
+    }
 
     article{
         grid-area: video;
-        padding: 20vh 0;
+        padding: 20px 0;
+
+        @include md{
+            padding: 0;
+            margin: -5px 0 0;
+        }
     }
 }
