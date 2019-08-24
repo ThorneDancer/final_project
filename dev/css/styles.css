@@ -436,13 +436,21 @@ a:link {
 #burger-icon {
   background-color: #151515;
   border: none;
-  font-size: 1.125rem;
   outline: none;
-  padding: 8px;
+  margin-left: 5px;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 100; }
+  z-index: 100;
+  animation: 20s linear infinite, Pulsate 6s linear infinite; }
+
+@keyframes Pulsate {
+  from {
+    opacity: 1; }
+  50% {
+    opacity: 0.2; }
+  to {
+    opacity: 1; } }
 
 #burger-icon:hover {
   color: #fff; }
@@ -455,14 +463,20 @@ a:link {
   width: 80vw;
   /* close btn */
   /* close btn */ }
-  #off-canvas-container button {
+  @media (min-width: 741px) {
+    #off-canvas-container {
+      width: 50vw; } }
+  @media (min-width: 1176px) {
+    #off-canvas-container {
+      width: 35vw; } }
+  #off-canvas-container div button {
     background-color: #151515;
     border: none;
     color: #fff;
     cursor: pointer;
     display: flex;
     justify-content: flex-start;
-    font-size: 1.5625rem;
+    font-size: 1.875rem;
     margin-bottom: 20px;
     transition: 0.25s;
     width: 100%; }
@@ -513,28 +527,178 @@ a:link {
   outline: none; }
   #home-page button div {
     background-image: url("../img/nav/full_logo.png");
-    height: 375px;
-    width: 375px;
+    height: 300px;
+    width: 350px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: 100%; }
+    @media (min-width: 549px) {
+      #home-page button div {
+        height: 400px;
+        width: 534px; } }
+    @media (min-width: 741px) {
+      #home-page button div {
+        height: 550px;
+        width: 721px; } }
+    @media (min-width: 950px) {
+      #home-page button div {
+        height: 700px;
+        width: 925px; } }
+    @media (min-width: 1176px) {
+      #home-page button div {
+        height: 850px;
+        width: 1190px; } }
   #home-page button h1 {
     color: #fff;
     letter-spacing: 0.25rem; }
+    @media (min-width: 741px) {
+      #home-page button h1 {
+        font-size: 2.75rem; } }
+
+#home-page #off-canvas-container div #nav-container nav ul li {
+  font-size: 1.25rem; }
+  @media (min-width: 741px) {
+    #home-page #off-canvas-container div #nav-container nav ul li {
+      font-size: 1.5rem; } }
+  @media (min-width: 950px) {
+    #home-page #off-canvas-container div #nav-container nav ul li {
+      font-size: 1.875rem; } }
+
+@media (min-width: 549px) {
+  #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    display: flex;
+    justify-content: center; } }
+
+@media (min-width: 741px) {
+  #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    margin-top: -10px; } }
+
+#home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+  background-image: url("../img/games/village_logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 225px; }
+  @media (min-width: 549px) {
+    #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      width: 75%; } }
+  @media (min-width: 950px) {
+    #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      height: 275px; } }
+
+#home-page #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+  margin: -50px 0 0; }
+  @media (min-width: 549px) {
+    #home-page #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+      display: flex;
+      justify-content: center; } }
+  #home-page #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+    background-image: url("../img/games/endure_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 200px; }
+    @media (min-width: 549px) {
+      #home-page #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+        width: 75%; } }
+
+#home-page #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+  margin: -90px 0 -40px; }
+  @media (min-width: 549px) {
+    #home-page #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+      display: flex;
+      justify-content: center;
+      margin-top: -80px; } }
+  #home-page #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+    background-image: url("../img/games/rain_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 200px; }
+    @media (min-width: 549px) {
+      #home-page #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+        width: 75%; } }
 
 #village-attacks {
   background-color: #262626; }
   #village-attacks button {
     background-color: #262626;
     border: none;
-    outline: none; }
+    outline: none;
+    background-color: transparent;
+    animation: none; }
     #village-attacks button div {
       background-image: url("../img/nav/logo.png");
-      height: 75px;
-      width: 75px;
+      height: 35px;
+      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      margin: 10px 0; }
+  #village-attacks #off-canvas-container div #nav-container nav ul li {
+    font-size: 1.25rem; }
+    @media (min-width: 741px) {
+      #village-attacks #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.5rem; } }
+    @media (min-width: 950px) {
+      #village-attacks #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.875rem; } }
+  @media (min-width: 549px) {
+    #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 741px) {
+    #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      margin-top: -10px; } }
+  #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+    background-image: url("../img/games/village_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 225px; }
+    @media (min-width: 549px) {
+      #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        width: 75%; } }
+    @media (min-width: 950px) {
+      #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        height: 275px; } }
+  #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+    margin: -50px 0 0; }
+    @media (min-width: 549px) {
+      #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+        display: flex;
+        justify-content: center; } }
+    #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+      background-image: url("../img/games/endure_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+          width: 75%; } }
+  #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+    margin: -90px 0 -40px; }
+    @media (min-width: 549px) {
+      #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        margin-top: -80px; } }
+    #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+      background-image: url("../img/games/rain_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+          width: 75%; } }
 
 #village-hero {
   background-image: url("../img/games/village_logo.png");
@@ -568,14 +732,78 @@ a:link {
   #endure-stars button {
     background-color: #262626;
     border: none;
-    outline: none; }
+    outline: none;
+    background-color: transparent;
+    animation: none; }
     #endure-stars button div {
       background-image: url("../img/nav/logo.png");
-      height: 75px;
-      width: 75px;
+      height: 35px;
+      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      margin: 10px 0; }
+  #endure-stars #off-canvas-container div #nav-container nav ul li {
+    font-size: 1.25rem; }
+    @media (min-width: 741px) {
+      #endure-stars #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.5rem; } }
+    @media (min-width: 950px) {
+      #endure-stars #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.875rem; } }
+  @media (min-width: 549px) {
+    #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 741px) {
+    #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      margin-top: -10px; } }
+  #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+    background-image: url("../img/games/village_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 225px; }
+    @media (min-width: 549px) {
+      #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        width: 75%; } }
+    @media (min-width: 950px) {
+      #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        height: 275px; } }
+  #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+    margin: -50px 0 0; }
+    @media (min-width: 549px) {
+      #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+        display: flex;
+        justify-content: center; } }
+    #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+      background-image: url("../img/games/endure_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+          width: 75%; } }
+  #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+    margin: -90px 0 -40px; }
+    @media (min-width: 549px) {
+      #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        margin-top: -80px; } }
+    #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+      background-image: url("../img/games/rain_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+          width: 75%; } }
 
 #endure-hero {
   background-image: url("../img/games/endure_logo.png");
@@ -600,14 +828,78 @@ a:link {
   #the-everrain button {
     background-color: #262626;
     border: none;
-    outline: none; }
+    outline: none;
+    background-color: transparent;
+    animation: none; }
     #the-everrain button div {
       background-image: url("../img/nav/logo.png");
-      height: 75px;
-      width: 75px;
+      height: 35px;
+      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      margin: 10px 0; }
+  #the-everrain #off-canvas-container div #nav-container nav ul li {
+    font-size: 1.25rem; }
+    @media (min-width: 741px) {
+      #the-everrain #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.5rem; } }
+    @media (min-width: 950px) {
+      #the-everrain #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.875rem; } }
+  @media (min-width: 549px) {
+    #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 741px) {
+    #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      margin-top: -10px; } }
+  #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+    background-image: url("../img/games/village_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 225px; }
+    @media (min-width: 549px) {
+      #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        width: 75%; } }
+    @media (min-width: 950px) {
+      #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        height: 275px; } }
+  #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+    margin: -50px 0 0; }
+    @media (min-width: 549px) {
+      #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+        display: flex;
+        justify-content: center; } }
+    #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+      background-image: url("../img/games/endure_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+          width: 75%; } }
+  #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+    margin: -90px 0 -40px; }
+    @media (min-width: 549px) {
+      #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        margin-top: -80px; } }
+    #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+      background-image: url("../img/games/rain_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+          width: 75%; } }
 
 #everrain-hero {
   background-image: url("../img/games/rain_logo.png");
@@ -634,44 +926,297 @@ a:link {
   #about button {
     background-color: #262626;
     border: none;
-    outline: none; }
+    outline: none;
+    background-color: transparent;
+    animation: none; }
     #about button div {
       background-image: url("../img/nav/logo.png");
-      height: 75px;
-      width: 75px;
+      height: 35px;
+      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      margin: 10px 0; }
+  #about #off-canvas-container div #nav-container nav ul li {
+    font-size: 1.25rem; }
+    @media (min-width: 741px) {
+      #about #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.5rem; } }
+    @media (min-width: 950px) {
+      #about #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.875rem; } }
+  @media (min-width: 549px) {
+    #about #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 741px) {
+    #about #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      margin-top: -10px; } }
+  #about #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+    background-image: url("../img/games/village_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 225px; }
+    @media (min-width: 549px) {
+      #about #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        width: 75%; } }
+    @media (min-width: 950px) {
+      #about #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        height: 275px; } }
+  #about #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+    margin: -50px 0 0; }
+    @media (min-width: 549px) {
+      #about #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+        display: flex;
+        justify-content: center; } }
+    #about #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+      background-image: url("../img/games/endure_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #about #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+          width: 75%; } }
+  #about #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+    margin: -90px 0 -40px; }
+    @media (min-width: 549px) {
+      #about #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        margin-top: -80px; } }
+    #about #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+      background-image: url("../img/games/rain_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #about #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+          width: 75%; } }
 
-#members div ul li:nth-child(1) figure {
-  background-image: url("../img/about/adam.png");
-  height: 400px;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+#about-heading {
+  background-color: #262626;
+  margin-top: 55px; }
+  #about-heading p {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    color: #fff; }
+    @media (min-width: 549px) {
+      #about-heading p {
+        font-size: 1.25rem;
+        line-height: 1.5rem; } }
+    @media (min-width: 741px) {
+      #about-heading p {
+        font-size: 1.5rem;
+        line-height: 1.8125rem; } }
+  #about-heading p:nth-child(2) {
+    margin: 20px 0; }
 
-#members div ul li:nth-child(2) figure {
-  background-image: url("../img/about/mike.png");
-  height: 400px;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+#members {
+  background-color: #262626; }
+  @media (min-width: 950px) {
+    #members div ul {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-areas: "adam-lg mike-lg"; } }
+  #members div ul li {
+    color: #fff; }
+    @media (min-width: 950px) {
+      #members div ul li {
+        margin: 10px; } }
+    #members div ul li article h1 {
+      font-family: 'Blinker', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.4375rem;
+      margin-top: 20px;
+      display: none; }
+      @media (min-width: 549px) {
+        #members div ul li article h1 {
+          font-size: 1.125rem; } }
+      @media (min-width: 741px) {
+        #members div ul li article h1 {
+          font-size: 1.375rem;
+          line-height: 1.875rem; } }
+    #members div ul li article h2 {
+      font-family: 'Blinker', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.4375rem;
+      display: none; }
+      @media (min-width: 549px) {
+        #members div ul li article h2 {
+          font-size: 1.125rem; } }
+      @media (min-width: 741px) {
+        #members div ul li article h2 {
+          font-size: 1.375rem;
+          line-height: 1.875rem; } }
+    #members div ul li article p {
+      font-family: 'Blinker', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.4375rem;
+      margin-top: 20px;
+      display: none; }
+      @media (min-width: 549px) {
+        #members div ul li article p {
+          font-size: 1.125rem; } }
+      @media (min-width: 741px) {
+        #members div ul li article p {
+          font-size: 1.375rem;
+          line-height: 1.875rem; } }
+  #members div ul li:nth-child(1) {
+    margin-bottom: 20px; }
+    @media (min-width: 549px) {
+      #members div ul li:nth-child(1) {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "adam adam-text";
+        grid-gap: 20px; } }
+    @media (min-width: 950px) {
+      #members div ul li:nth-child(1) {
+        display: block;
+        grid-area: adam-lg; } }
+    #members div ul li:nth-child(1) figure {
+      background-image: url("../img/about/adam.png");
+      height: 400px;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      @media (min-width: 549px) {
+        #members div ul li:nth-child(1) figure {
+          height: 300px;
+          width: 300px;
+          grid-area: adam; } }
+      @media (min-width: 950px) {
+        #members div ul li:nth-child(1) figure {
+          height: 600px;
+          width: 100%; } }
+    @media (min-width: 549px) {
+      #members div ul li:nth-child(1) article {
+        grid-area: adam-text; } }
+  @media (min-width: 549px) {
+    #members div ul li:nth-child(2) {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-areas: "mike mike-text";
+      grid-gap: 20px; } }
+  @media (min-width: 950px) {
+    #members div ul li:nth-child(2) {
+      display: block;
+      grid-area: mike-lg; } }
+  #members div ul li:nth-child(2) figure {
+    background-image: url("../img/about/mike.png");
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media (min-width: 549px) {
+      #members div ul li:nth-child(2) figure {
+        height: 300px;
+        width: 300px;
+        grid-area: mike; } }
+    @media (min-width: 950px) {
+      #members div ul li:nth-child(2) figure {
+        height: 600px;
+        width: 100%; } }
+  @media (min-width: 549px) {
+    #members div ul li:nth-child(2) article {
+      grid-area: mike-text; } }
+  @media (min-width: 950px) {
+    #members div ul li:hover, #members div ul li:active {
+      width: 50%; } }
+  #members div ul li:hover h1, #members div ul li:active h1 {
+    display: block; }
+  #members div ul li:hover h2, #members div ul li:active h2 {
+    display: block; }
+  #members div ul li:hover p, #members div ul li:active p {
+    display: block; }
 
 #gallery {
   background-color: #262626; }
   #gallery button {
     background-color: #262626;
     border: none;
-    outline: none; }
+    outline: none;
+    background-color: transparent;
+    animation: none; }
     #gallery button div {
       background-image: url("../img/nav/logo.png");
-      height: 75px;
-      width: 75px;
+      height: 35px;
+      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      margin: 10px 0; }
+  #gallery #off-canvas-container div #nav-container nav ul li {
+    font-size: 1.25rem; }
+    @media (min-width: 741px) {
+      #gallery #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.5rem; } }
+    @media (min-width: 950px) {
+      #gallery #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.875rem; } }
+  @media (min-width: 549px) {
+    #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 741px) {
+    #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      margin-top: -10px; } }
+  #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+    background-image: url("../img/games/village_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 225px; }
+    @media (min-width: 549px) {
+      #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        width: 75%; } }
+    @media (min-width: 950px) {
+      #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        height: 275px; } }
+  #gallery #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+    margin: -50px 0 0; }
+    @media (min-width: 549px) {
+      #gallery #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+        display: flex;
+        justify-content: center; } }
+    #gallery #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+      background-image: url("../img/games/endure_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #gallery #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+          width: 75%; } }
+  #gallery #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+    margin: -90px 0 -40px; }
+    @media (min-width: 549px) {
+      #gallery #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        margin-top: -80px; } }
+    #gallery #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+      background-image: url("../img/games/rain_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #gallery #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+          width: 75%; } }
 
 #concept div ul li:nth-child(1) {
   background-image: url("../img/gallery/concept/concept_1.png");
@@ -726,14 +1271,78 @@ a:link {
   #store button {
     background-color: #262626;
     border: none;
-    outline: none; }
+    outline: none;
+    background-color: transparent;
+    animation: none; }
     #store button div {
       background-image: url("../img/nav/logo.png");
-      height: 75px;
-      width: 75px;
+      height: 35px;
+      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      margin: 10px 0; }
+  #store #off-canvas-container div #nav-container nav ul li {
+    font-size: 1.25rem; }
+    @media (min-width: 741px) {
+      #store #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.5rem; } }
+    @media (min-width: 950px) {
+      #store #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.875rem; } }
+  @media (min-width: 549px) {
+    #store #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 741px) {
+    #store #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      margin-top: -10px; } }
+  #store #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+    background-image: url("../img/games/village_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 225px; }
+    @media (min-width: 549px) {
+      #store #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        width: 75%; } }
+    @media (min-width: 950px) {
+      #store #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        height: 275px; } }
+  #store #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+    margin: -50px 0 0; }
+    @media (min-width: 549px) {
+      #store #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+        display: flex;
+        justify-content: center; } }
+    #store #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+      background-image: url("../img/games/endure_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #store #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+          width: 75%; } }
+  #store #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+    margin: -90px 0 -40px; }
+    @media (min-width: 549px) {
+      #store #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        margin-top: -80px; } }
+    #store #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+      background-image: url("../img/games/rain_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #store #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+          width: 75%; } }
 
 #store-page div ul li:nth-child(1) figure {
   background-image: url("../img/store/base_game.png");
@@ -780,14 +1389,78 @@ a:link {
   #faq button {
     background-color: #262626;
     border: none;
-    outline: none; }
+    outline: none;
+    background-color: transparent;
+    animation: none; }
     #faq button div {
       background-image: url("../img/nav/logo.png");
-      height: 75px;
-      width: 75px;
+      height: 35px;
+      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      margin: 10px 0; }
+  #faq #off-canvas-container div #nav-container nav ul li {
+    font-size: 1.25rem; }
+    @media (min-width: 741px) {
+      #faq #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.5rem; } }
+    @media (min-width: 950px) {
+      #faq #off-canvas-container div #nav-container nav ul li {
+        font-size: 1.875rem; } }
+  @media (min-width: 549px) {
+    #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 741px) {
+    #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+      margin-top: -10px; } }
+  #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+    background-image: url("../img/games/village_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 225px; }
+    @media (min-width: 549px) {
+      #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        width: 75%; } }
+    @media (min-width: 950px) {
+      #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        height: 275px; } }
+  #faq #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+    margin: -50px 0 0; }
+    @media (min-width: 549px) {
+      #faq #off-canvas-container div #nav-container nav ul li:nth-child(3) {
+        display: flex;
+        justify-content: center; } }
+    #faq #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+      background-image: url("../img/games/endure_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #faq #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
+          width: 75%; } }
+  #faq #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+    margin: -90px 0 -40px; }
+    @media (min-width: 549px) {
+      #faq #off-canvas-container div #nav-container nav ul li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        margin-top: -80px; } }
+    #faq #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+      background-image: url("../img/games/rain_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 200px; }
+      @media (min-width: 549px) {
+        #faq #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
+          width: 75%; } }
 
 #questions {
   background-color: #262626; }

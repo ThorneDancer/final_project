@@ -4,13 +4,108 @@
         background-color: $background;
         border: none;
         outline: none;
+        background-color: transparent;
+        animation: none;
         div{
             background-image: url("../img/nav/logo.png");
-            height: 75px;
-            width: 75px;
+            height: 35px;
+            width: 40px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            margin: 10px 0;
+        }
+    }
+    #off-canvas-container{
+        div{
+            #nav-container{
+                nav{
+                    ul{
+                        li{
+                            font-size: rem-calc(20);
+
+                            @include md{
+                                font-size: rem-calc(24);
+                            }
+                            @include lg{
+                                font-size: rem-calc(30);
+                            }
+                        }
+
+                        li:nth-child(2){
+
+                            @include sm{
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            @include md{
+                                margin-top: -10px;
+                            }
+
+                            a{
+                                    background-image: url("../img/games/village_logo.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: 100%;
+                                    width: 100%;
+                                    height: 225px;
+
+                                    @include sm{
+                                        width: 75%;
+                                    }
+                                    @include lg{
+                                        height: 275px;
+                                    }
+                            }
+
+                        }
+                        li:nth-child(3){
+                            margin: -50px 0 0;
+
+                            @include sm{
+                                display: flex;
+                                justify-content: center;
+                            }
+                            a{
+                                    background-image: url("../img/games/endure_logo.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: 100%;
+                                    width: 100%;
+                                    height: 200px;
+
+                                    @include sm{
+                                        width: 75%
+                                    }
+                            }
+
+                        }
+                        li:nth-child(4){
+                            margin: -90px 0 -40px;
+
+                            @include sm{
+                                display: flex;
+                                justify-content: center;
+                                margin-top: -80px;
+                            }
+                            a{
+                                    background-image: url("../img/games/rain_logo.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: 100%;
+                                    width: 100%;
+                                    height: 200px;
+
+                                    @include sm{
+                                        width: 75%
+                                    }
+                            }
+
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -61,7 +61,7 @@
 		},
 	"/img/about/adam.png": {
 		"ft": 32768,
-		"iS": 29842,
+		"iS": 28802,
 		"oA": 0,
 		"oAP": "/img/about/adam.png",
 		"oF": 0,
@@ -72,7 +72,7 @@
 		},
 	"/img/about/mike.png": {
 		"ft": 32768,
-		"iS": 43812,
+		"iS": 42087,
 		"oA": 0,
 		"oAP": "/img/about/mike.png",
 		"oF": 0,
@@ -81,66 +81,66 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/img/gallery/Concept/concept_1.png": {
+	"/img/gallery/concept/concept_1.png": {
 		"ft": 32768,
 		"iS": 686977,
 		"oA": 0,
-		"oAP": "/img/gallery/Concept/concept_1.png",
+		"oAP": "/img/gallery/concept/concept_1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/img/gallery/Concept/concept_2.png": {
+	"/img/gallery/concept/concept_2.png": {
 		"ft": 32768,
 		"iS": 1081339,
 		"oA": 0,
-		"oAP": "/img/gallery/Concept/concept_2.png",
+		"oAP": "/img/gallery/concept/concept_2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/img/gallery/Concept/concept_3.png": {
+	"/img/gallery/concept/concept_3.png": {
 		"ft": 32768,
 		"iS": 903948,
 		"oA": 0,
-		"oAP": "/img/gallery/Concept/concept_3.png",
+		"oAP": "/img/gallery/concept/concept_3.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/img/gallery/Miniatures/mini_1.png": {
+	"/img/gallery/miniatures/mini_1.png": {
 		"ft": 32768,
 		"iS": 679451,
 		"oA": 0,
-		"oAP": "/img/gallery/Miniatures/mini_1.png",
+		"oAP": "/img/gallery/miniatures/mini_1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/img/gallery/Miniatures/mini_2.png": {
+	"/img/gallery/miniatures/mini_2.png": {
 		"ft": 32768,
 		"iS": 843198,
 		"oA": 0,
-		"oAP": "/img/gallery/Miniatures/mini_2.png",
+		"oAP": "/img/gallery/miniatures/mini_2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/img/gallery/Miniatures/mini_3.png": {
+	"/img/gallery/miniatures/mini_3.png": {
 		"ft": 32768,
 		"iS": 924090,
 		"oA": 0,
-		"oAP": "/img/gallery/Miniatures/mini_3.png",
+		"oAP": "/img/gallery/miniatures/mini_3.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -149,7 +149,7 @@
 		},
 	"/img/games/endure_board.png": {
 		"ft": 32768,
-		"iS": 410228,
+		"iS": 368506,
 		"oA": 0,
 		"oAP": "/img/games/endure_board.png",
 		"oF": 0,
@@ -160,7 +160,7 @@
 		},
 	"/img/games/endure_logo.png": {
 		"ft": 32768,
-		"iS": 46125,
+		"iS": 39897,
 		"oA": 0,
 		"oAP": "/img/games/endure_logo.png",
 		"oF": 0,
@@ -171,7 +171,7 @@
 		},
 	"/img/games/rain_logo.png": {
 		"ft": 32768,
-		"iS": 119552,
+		"iS": 105783,
 		"oA": 0,
 		"oAP": "/img/games/rain_logo.png",
 		"oF": 0,
@@ -182,7 +182,7 @@
 		},
 	"/img/games/village_board.png": {
 		"ft": 32768,
-		"iS": 560884,
+		"iS": 545409,
 		"oA": 0,
 		"oAP": "/img/games/village_board.png",
 		"oF": 0,
@@ -193,7 +193,7 @@
 		},
 	"/img/games/village_logo.png": {
 		"ft": 32768,
-		"iS": 136980,
+		"iS": 124465,
 		"oA": 0,
 		"oAP": "/img/games/village_logo.png",
 		"oF": 0,
@@ -224,7 +224,7 @@
 		},
 	"/img/nav/full_logo.png": {
 		"ft": 32768,
-		"iS": 15443,
+		"iS": 15050,
 		"oA": 0,
 		"oAP": "/img/nav/full_logo.png",
 		"oF": 0,
@@ -235,7 +235,7 @@
 		},
 	"/img/nav/logo.png": {
 		"ft": 32768,
-		"iS": 7206,
+		"iS": 6772,
 		"oA": 0,
 		"oAP": "/img/nav/logo.png",
 		"oF": 0,
@@ -246,7 +246,7 @@
 		},
 	"/img/store/base_game.png": {
 		"ft": 32768,
-		"iS": 82311,
+		"iS": 75971,
 		"oA": 0,
 		"oAP": "/img/store/base_game.png",
 		"oF": 0,
@@ -257,7 +257,7 @@
 		},
 	"/img/store/despair.png": {
 		"ft": 32768,
-		"iS": 64817,
+		"iS": 58807,
 		"oA": 0,
 		"oAP": "/img/store/despair.png",
 		"oF": 0,
@@ -268,7 +268,7 @@
 		},
 	"/img/store/doom.png": {
 		"ft": 32768,
-		"iS": 62858,
+		"iS": 54070,
 		"oA": 0,
 		"oAP": "/img/store/doom.png",
 		"oF": 0,
@@ -279,7 +279,7 @@
 		},
 	"/img/store/dread.png": {
 		"ft": 32768,
-		"iS": 65187,
+		"iS": 58736,
 		"oA": 0,
 		"oAP": "/img/store/dread.png",
 		"oF": 0,
@@ -290,7 +290,7 @@
 		},
 	"/img/store/fear.png": {
 		"ft": 32768,
-		"iS": 64137,
+		"iS": 56109,
 		"oA": 0,
 		"oAP": "/img/store/fear.png",
 		"oF": 0,
