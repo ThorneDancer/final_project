@@ -1,3 +1,19 @@
 /* =============
     Buttons
 ============= */
+.collapsible{
+    background-color: $background;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    margin: 10px 0;
+}
+.collapsible-content{
+    display: none;
+    overflow: hidden;
+    color: $white;
+    background-color: $background;
+    padding-bottom: 10px;
+}

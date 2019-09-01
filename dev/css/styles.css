@@ -335,6 +335,9 @@ a:link, a:visited {
 body {
   background-color: #262626; }
 
+button:active, button:hover {
+  cursor: pointer; }
+
 /* =============
     Typography
 ============= */
@@ -408,6 +411,22 @@ main {
 /* =============
     Buttons
 ============= */
+.collapsible {
+  background-color: #262626;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  margin: 10px 0; }
+
+.collapsible-content {
+  display: none;
+  overflow: hidden;
+  color: #fff;
+  background-color: #262626;
+  padding-bottom: 10px; }
+
 /* =============
     Forms
 ============= */
@@ -423,6 +442,69 @@ input[type=password],
 textarea {
   -webkit-appearance: none; }
 
+#form {
+  background-color: #262626;
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+  grid-template-areas: ". form .";
+  padding: 40px 0; }
+  @media (min-width: 741px) {
+    #form {
+      grid-template-columns: auto 90% auto; } }
+  @media (min-width: 950px) {
+    #form {
+      grid-template-columns: auto 75% auto; } }
+  @media (min-width: 1176px) {
+    #form {
+      grid-template-columns: auto 60% auto; } }
+  #form > div {
+    grid-area: form; }
+    #form > div form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "first first" "last last" "email email" "comment comment" "button button";
+      grid-gap: 20px; }
+      @media (min-width: 741px) {
+        #form > div form {
+          grid-template-areas: "first comment" "last comment" "email comment" "button button"; } }
+      #form > div form input {
+        width: 96%;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 1%;
+        padding-left: 3%;
+        height: 30px;
+        background-color: #262626;
+        color: #fff; }
+      #form > div form textarea {
+        width: 98%;
+        border: none;
+        padding: 1%;
+        height: 200px; }
+      #form > div form div:nth-child(1) {
+        grid-area: first; }
+      #form > div form div:nth-child(2) {
+        grid-area: last; }
+      #form > div form div:nth-child(3) {
+        grid-area: email; }
+      #form > div form div:nth-child(4) {
+        grid-area: comment; }
+      #form > div form div:nth-child(5) {
+        grid-area: button;
+        text-align: center; }
+        #form > div form div:nth-child(5) button {
+          border: 1px #fff solid;
+          border-radius: 15px;
+          color: #fff;
+          background-color: #262626;
+          padding: 10px 20px; }
+          @media (min-width: 950px) {
+            #form > div form div:nth-child(5) button {
+              font-size: 1.375rem; } }
+        #form > div form div:nth-child(5) button:hover, #form > div form div:nth-child(5) button:active {
+          color: #D56B26;
+          border-color: #D56B26; }
+
 /* =============
     Navigation
 ============= */
@@ -437,12 +519,12 @@ a:link {
   background-color: #151515;
   border: none;
   outline: none;
-  margin-left: 5px;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 100;
-  animation: 20s linear infinite, Pulsate 6s linear infinite; }
+  z-index: 100; }
+  #burger-icon div figure {
+    animation: 20s linear infinite, Pulsate 6s linear infinite; }
 
 @keyframes Pulsate {
   from {
@@ -460,15 +542,18 @@ a:link {
         Here are the properties you can changes for the off-canvas navigation-slide
     ------------- */
   background-color: #151515;
-  width: 80vw;
+  width: 50vw;
   /* close btn */
   /* close btn */ }
+  @media (min-width: 549px) {
+    #off-canvas-container {
+      width: 40vw; } }
   @media (min-width: 741px) {
     #off-canvas-container {
-      width: 50vw; } }
+      width: 35vw; } }
   @media (min-width: 1176px) {
     #off-canvas-container {
-      width: 35vw; } }
+      width: 400px; } }
   #off-canvas-container div button {
     background-color: #151515;
     border: none;
@@ -481,15 +566,15 @@ a:link {
     transition: 0.25s;
     width: 100%; }
   #off-canvas-container button:hover {
-    color: #fff; }
+    color: #D56B26; }
   #off-canvas-container ul li {
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
     #off-canvas-container ul li a:link,
     #off-canvas-container ul li a:visited {
       color: #fff; }
     #off-canvas-container ul li a:active,
     #off-canvas-container ul li a:hover {
-      color: #fff; }
+      color: #D56B26; }
 
 /* ===================
     Video Player
@@ -524,36 +609,46 @@ a:link {
 #home-page button {
   background-color: #262626;
   border: none;
-  outline: none; }
+  outline: none;
+  width: 100vw; }
   #home-page button div {
-    background-image: url("../img/nav/full_logo.png");
-    height: 300px;
-    width: 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%; }
-    @media (min-width: 549px) {
-      #home-page button div {
-        height: 400px;
-        width: 534px; } }
-    @media (min-width: 741px) {
-      #home-page button div {
-        height: 550px;
-        width: 721px; } }
-    @media (min-width: 950px) {
-      #home-page button div {
-        height: 700px;
-        width: 925px; } }
-    @media (min-width: 1176px) {
-      #home-page button div {
-        height: 850px;
-        width: 1190px; } }
+    align-items: center;
+    display: flex;
+    justify-content: center; }
+    #home-page button div figure {
+      background-image: url("../img/nav/full_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 50px;
+      padding-top: 50vh;
+      width: 350px; }
+      @media (min-width: 549px) {
+        #home-page button div figure {
+          height: 100px;
+          width: 450px; } }
+      @media (min-width: 741px) {
+        #home-page button div figure {
+          height: 150px;
+          width: 575px; } }
+      @media (min-width: 950px) {
+        #home-page button div figure {
+          height: 200px;
+          width: 700px; } }
+      @media (min-width: 1176px) {
+        #home-page button div figure {
+          height: 250px;
+          width: 800px; } }
   #home-page button h1 {
     color: #fff;
     letter-spacing: 0.25rem; }
     @media (min-width: 741px) {
       #home-page button h1 {
         font-size: 2.75rem; } }
+  #home-page button h1:active,
+  #home-page button h1:hover {
+    color: #7FD9E6;
+    transition: 0.5s; }
 
 #home-page #off-canvas-container div #nav-container nav ul li {
   font-size: 1.25rem; }
@@ -564,60 +659,44 @@ a:link {
     #home-page #off-canvas-container div #nav-container nav ul li {
       font-size: 1.875rem; } }
 
-@media (min-width: 549px) {
-  #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-    display: flex;
-    justify-content: center; } }
-
-@media (min-width: 741px) {
-  #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-    margin-top: -10px; } }
-
-#home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-  background-image: url("../img/games/village_logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
-  height: 225px; }
-  @media (min-width: 549px) {
-    #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-      width: 75%; } }
-  @media (min-width: 950px) {
-    #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-      height: 275px; } }
+#home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+  display: flex;
+  justify-content: center; }
+  #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+    background-image: url("../img/games/village_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 85%; }
+    @media (min-width: 549px) {
+      #home-page #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+        width: 75%; } }
 
 #home-page #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-  margin: -50px 0 0; }
-  @media (min-width: 549px) {
-    #home-page #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-      display: flex;
-      justify-content: center; } }
+  display: flex;
+  justify-content: center; }
   #home-page #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
     background-image: url("../img/games/endure_logo.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 200px; }
+    background-size: contain;
+    height: 75px;
+    width: 85%; }
     @media (min-width: 549px) {
       #home-page #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
         width: 75%; } }
 
 #home-page #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-  margin: -90px 0 -40px; }
-  @media (min-width: 549px) {
-    #home-page #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-      display: flex;
-      justify-content: center;
-      margin-top: -80px; } }
+  display: flex;
+  justify-content: center; }
   #home-page #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
     background-image: url("../img/games/rain_logo.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 200px; }
+    background-size: contain;
+    height: 75px;
+    width: 85%; }
     @media (min-width: 549px) {
       #home-page #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
         width: 75%; } }
@@ -625,19 +704,19 @@ a:link {
 #village-attacks {
   background-color: #262626; }
   #village-attacks button {
+    animation: none;
     background-color: #262626;
-    border: none;
-    outline: none;
     background-color: transparent;
-    animation: none; }
+    border: none;
+    outline: none; }
     #village-attacks button div {
       background-image: url("../img/nav/logo.png");
-      height: 35px;
-      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 10px 0; }
+      height: 35px;
+      margin: 10px 0;
+      width: 40px; }
   #village-attacks #off-canvas-container div #nav-container nav ul li {
     font-size: 1.25rem; }
     @media (min-width: 741px) {
@@ -646,56 +725,42 @@ a:link {
     @media (min-width: 950px) {
       #village-attacks #off-canvas-container div #nav-container nav ul li {
         font-size: 1.875rem; } }
-  @media (min-width: 549px) {
-    #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      display: flex;
-      justify-content: center; } }
-  @media (min-width: 741px) {
-    #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      margin-top: -10px; } }
-  #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-    background-image: url("../img/games/village_logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 225px; }
-    @media (min-width: 549px) {
-      #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        width: 75%; } }
-    @media (min-width: 950px) {
-      #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        height: 275px; } }
+  #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    display: flex;
+    justify-content: center; }
+    #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      background-image: url("../img/games/village_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 85%; }
+      @media (min-width: 549px) {
+        #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+          width: 75%; } }
   #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-    margin: -50px 0 0; }
-    @media (min-width: 549px) {
-      #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-        display: flex;
-        justify-content: center; } }
+    display: flex;
+    justify-content: center; }
     #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
       background-image: url("../img/games/endure_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
           width: 75%; } }
   #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-    margin: -90px 0 -40px; }
-    @media (min-width: 549px) {
-      #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-        display: flex;
-        justify-content: center;
-        margin-top: -80px; } }
+    display: flex;
+    justify-content: center; }
     #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
       background-image: url("../img/games/rain_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #village-attacks #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
           width: 75%; } }
@@ -703,12 +768,12 @@ a:link {
 #village-hero {
   background-color: #262626;
   background-image: url("../img/games/village_logo.png");
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   height: 290px;
-  width: 100%;
-  margin-top: 55px; }
+  margin-top: 55px;
+  width: 100%; }
   @media (min-width: 549px) {
     #village-hero {
       height: 420px; } }
@@ -724,12 +789,13 @@ a:link {
 
 #village-content {
   background-color: #262626;
+  padding-bottom: 40px;
   text-align: justify; }
   @media (min-width: 1176px) {
     #village-content {
       display: grid;
-      grid-template-columns: auto 1170px auto;
-      grid-template-areas: ". village-content ."; } }
+      grid-template-areas: ". village-content .";
+      grid-template-columns: auto 1100px auto; } }
   @media (min-width: 1176px) {
     #village-content div {
       grid-area: village-content; } }
@@ -746,9 +812,9 @@ a:link {
         line-height: 2.0625rem; } }
     @media (min-width: 950px) {
       #village-content div p {
-        text-align: left;
         font-size: 1.5rem;
-        line-height: 2.375rem; } }
+        line-height: 2.375rem;
+        text-align: left; } }
   @media (min-width: 741px) {
     #village-content div p:nth-child(2) {
       width: 55%; } }
@@ -761,25 +827,26 @@ a:link {
       width: 100%; } }
   #village-content div figure {
     background-image: url("../img/games/village_board.png");
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
     height: 290px;
-    width: 100%;
-    margin: -10px 0 10px; }
+    margin: 10px 0;
+    width: 100%; }
     @media (min-width: 549px) {
       #village-content div figure {
         height: 375px; } }
     @media (min-width: 741px) {
       #village-content div figure {
         height: 500px;
-        margin: -40px 0 -10px; } }
+        margin-bottom: 10px; } }
     @media (min-width: 950px) {
       #village-content div figure {
         height: 625px; } }
     @media (min-width: 1176px) {
       #village-content div figure {
-        height: 775px; } }
+        height: 775px;
+        margin: -40px 0; } }
   #village-content div aside {
     display: flex;
     justify-content: center; }
@@ -793,28 +860,30 @@ a:link {
         #village-content div aside button {
           font-size: 2.1875rem; } }
       #village-content div aside button a {
-        color: #fff;
         border: 1px #fff solid;
         border-radius: 10px;
+        color: #fff;
         padding: 10px; }
-      #village-content div aside button a:hover, #village-content div aside button a:active {
-        color: #D56B26;
-        border-color: #D56B26; }
+      #village-content div aside button a:active,
+      #village-content div aside button a:hover {
+        border-color: #D56B26;
+        color: #D56B26; }
 
 #village-video {
   background-color: #262626;
   display: grid;
-  grid-template-columns: 10px auto 10px;
   grid-template-areas: ". video .";
-  height: 100vh; }
+  grid-template-columns: 10px auto 10px;
+  height: 55vh;
+  padding-bottom: 40px; }
   @media (min-width: 741px) {
     #village-video {
-      grid-template-columns: auto auto 80% 10px;
-      grid-template-areas: ". . video ."; } }
+      grid-template-areas: ". . video .";
+      grid-template-columns: auto auto 80% 10px; } }
   @media (min-width: 950px) {
     #village-video {
-      grid-template-columns: auto 80% auto;
-      grid-template-areas: ". video ."; } }
+      grid-template-areas: ". video .";
+      grid-template-columns: auto 80% auto; } }
   @media (min-width: 1176px) {
     #village-video {
       grid-template-columns: auto 70% auto; } }
@@ -823,25 +892,25 @@ a:link {
     padding: 20px 0; }
     @media (min-width: 741px) {
       #village-video article {
-        padding: 0;
-        margin: -5px 0 0; } }
+        margin: -5px 0 0;
+        padding: 0; } }
 
 #endure-stars {
   background-color: #262626; }
   #endure-stars button {
+    animation: none;
     background-color: #262626;
-    border: none;
-    outline: none;
     background-color: transparent;
-    animation: none; }
+    border: none;
+    outline: none; }
     #endure-stars button div {
       background-image: url("../img/nav/logo.png");
-      height: 35px;
-      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 10px 0; }
+      height: 35px;
+      margin: 10px 0;
+      width: 40px; }
   #endure-stars #off-canvas-container div #nav-container nav ul li {
     font-size: 1.25rem; }
     @media (min-width: 741px) {
@@ -850,56 +919,42 @@ a:link {
     @media (min-width: 950px) {
       #endure-stars #off-canvas-container div #nav-container nav ul li {
         font-size: 1.875rem; } }
-  @media (min-width: 549px) {
-    #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      display: flex;
-      justify-content: center; } }
-  @media (min-width: 741px) {
-    #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      margin-top: -10px; } }
-  #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-    background-image: url("../img/games/village_logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 225px; }
-    @media (min-width: 549px) {
-      #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        width: 75%; } }
-    @media (min-width: 950px) {
-      #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        height: 275px; } }
+  #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    display: flex;
+    justify-content: center; }
+    #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      background-image: url("../img/games/village_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 85%; }
+      @media (min-width: 549px) {
+        #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+          width: 75%; } }
   #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-    margin: -50px 0 0; }
-    @media (min-width: 549px) {
-      #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-        display: flex;
-        justify-content: center; } }
+    display: flex;
+    justify-content: center; }
     #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
       background-image: url("../img/games/endure_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
           width: 75%; } }
   #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-    margin: -90px 0 -40px; }
-    @media (min-width: 549px) {
-      #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-        display: flex;
-        justify-content: center;
-        margin-top: -80px; } }
+    display: flex;
+    justify-content: center; }
     #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
       background-image: url("../img/games/rain_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #endure-stars #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
           width: 75%; } }
@@ -907,12 +962,12 @@ a:link {
 #endure-hero {
   background-color: #262626;
   background-image: url("../img/games/endure_logo.png");
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   height: 140px;
-  width: 100%;
-  margin-top: 55px; }
+  margin-top: 55px;
+  width: 100%; }
   @media (min-width: 549px) {
     #endure-hero {
       height: 180px; } }
@@ -928,13 +983,13 @@ a:link {
 
 #endure-content {
   background-color: #262626;
-  text-align: justify;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  text-align: justify; }
   @media (min-width: 1176px) {
     #endure-content {
       display: grid;
-      grid-template-columns: auto 1170px auto;
-      grid-template-areas: ". endure-content ."; } }
+      grid-template-areas: ". endure-content .";
+      grid-template-columns: auto 1100px auto; } }
   @media (min-width: 1176px) {
     #endure-content div {
       grid-area: endure-content; } }
@@ -951,9 +1006,9 @@ a:link {
         line-height: 2.0625rem; } }
     @media (min-width: 950px) {
       #endure-content div p {
-        text-align: left;
         font-size: 1.5rem;
-        line-height: 2.375rem; } }
+        line-height: 2.375rem;
+        text-align: left; } }
   @media (min-width: 741px) {
     #endure-content div p:nth-child(2) {
       width: 55%; } }
@@ -966,25 +1021,26 @@ a:link {
       width: 100%; } }
   #endure-content div figure {
     background-image: url("../img/games/endure_board.png");
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
     height: 240px;
-    width: 100%;
-    margin: 0 0 10px; }
+    margin: 10px 0;
+    width: 100%; }
     @media (min-width: 549px) {
       #endure-content div figure {
         height: 310px; } }
     @media (min-width: 741px) {
       #endure-content div figure {
         height: 420px;
-        margin: -40px 0 -10px; } }
+        margin-bottom: 10px; } }
     @media (min-width: 950px) {
       #endure-content div figure {
         height: 525px; } }
     @media (min-width: 1176px) {
       #endure-content div figure {
-        height: 650px; } }
+        height: 650px;
+        margin: -40px 0 20px; } }
   #endure-content div aside {
     display: flex;
     justify-content: center; }
@@ -998,30 +1054,31 @@ a:link {
         #endure-content div aside button {
           font-size: 2.1875rem; } }
       #endure-content div aside button a {
-        color: #fff;
         border: 1px #fff solid;
         border-radius: 10px;
+        color: #fff;
         padding: 10px; }
-      #endure-content div aside button a:hover, #endure-content div aside button a:active {
-        color: #D56B26;
-        border-color: #D56B26; }
+      #endure-content div aside button a:active,
+      #endure-content div aside button a:hover {
+        border-color: #D56B26;
+        color: #D56B26; }
 
 #the-everrain {
   background-color: #262626; }
   #the-everrain button {
+    animation: none;
     background-color: #262626;
-    border: none;
-    outline: none;
     background-color: transparent;
-    animation: none; }
+    border: none;
+    outline: none; }
     #the-everrain button div {
       background-image: url("../img/nav/logo.png");
-      height: 35px;
-      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 10px 0; }
+      height: 35px;
+      margin: 10px 0;
+      width: 40px; }
   #the-everrain #off-canvas-container div #nav-container nav ul li {
     font-size: 1.25rem; }
     @media (min-width: 741px) {
@@ -1030,56 +1087,42 @@ a:link {
     @media (min-width: 950px) {
       #the-everrain #off-canvas-container div #nav-container nav ul li {
         font-size: 1.875rem; } }
-  @media (min-width: 549px) {
-    #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      display: flex;
-      justify-content: center; } }
-  @media (min-width: 741px) {
-    #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      margin-top: -10px; } }
-  #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-    background-image: url("../img/games/village_logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 225px; }
-    @media (min-width: 549px) {
-      #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        width: 75%; } }
-    @media (min-width: 950px) {
-      #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        height: 275px; } }
+  #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    display: flex;
+    justify-content: center; }
+    #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      background-image: url("../img/games/village_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 85%; }
+      @media (min-width: 549px) {
+        #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+          width: 75%; } }
   #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-    margin: -50px 0 0; }
-    @media (min-width: 549px) {
-      #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-        display: flex;
-        justify-content: center; } }
+    display: flex;
+    justify-content: center; }
     #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
       background-image: url("../img/games/endure_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
           width: 75%; } }
   #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-    margin: -90px 0 -40px; }
-    @media (min-width: 549px) {
-      #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-        display: flex;
-        justify-content: center;
-        margin-top: -80px; } }
+    display: flex;
+    justify-content: center; }
     #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
       background-image: url("../img/games/rain_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #the-everrain #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
           width: 75%; } }
@@ -1087,10 +1130,11 @@ a:link {
 #everrain-hero {
   background-color: #262626;
   background-image: url("../img/games/rain_logo.png");
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   height: 110px;
+  margin-top: 15px;
   width: 100%; }
   @media (min-width: 549px) {
     #everrain-hero {
@@ -1106,13 +1150,14 @@ a:link {
       height: 290px; } }
 
 #everrain-content {
-  text-align: justify;
-  background-color: #262626; }
+  background-color: #262626;
+  padding-bottom: 40px;
+  text-align: justify; }
   @media (min-width: 1176px) {
     #everrain-content {
       display: grid;
-      grid-template-columns: auto 1170px auto;
-      grid-template-areas: ". everrain-content ."; } }
+      grid-template-areas: ". everrain-content .";
+      grid-template-columns: auto 1100px auto; } }
   @media (min-width: 1176px) {
     #everrain-content div {
       grid-area: everrain-content; } }
@@ -1129,9 +1174,9 @@ a:link {
         line-height: 2.0625rem; } }
     @media (min-width: 950px) {
       #everrain-content div p {
-        text-align: left;
         font-size: 1.5rem;
-        line-height: 2.375rem; } }
+        line-height: 2.375rem;
+        text-align: left; } }
   @media (min-width: 741px) {
     #everrain-content div p:nth-child(2) {
       width: 55%; } }
@@ -1148,28 +1193,30 @@ a:link {
         #everrain-content div aside button {
           font-size: 2.1875rem; } }
       #everrain-content div aside button a {
-        color: #fff;
         border: 1px #fff solid;
         border-radius: 10px;
+        color: #fff;
         padding: 10px; }
-      #everrain-content div aside button a:hover, #everrain-content div aside button a:active {
-        color: #D56B26;
-        border-color: #D56B26; }
+      #everrain-content div aside button a:active,
+      #everrain-content div aside button a:hover {
+        border-color: #D56B26;
+        color: #D56B26; }
 
 #everrain-video {
   background-color: #262626;
   display: grid;
-  grid-template-columns: 10px auto 10px;
   grid-template-areas: ". video .";
-  height: 100vh; }
+  grid-template-columns: 10px auto 10px;
+  height: 55vh;
+  padding-bottom: 40px; }
   @media (min-width: 741px) {
     #everrain-video {
-      grid-template-columns: auto auto 80% 10px;
-      grid-template-areas: ". . video ."; } }
+      grid-template-areas: ". . video .";
+      grid-template-columns: auto auto 80% 10px; } }
   @media (min-width: 950px) {
     #everrain-video {
-      grid-template-columns: auto 80% auto;
-      grid-template-areas: ". video ."; } }
+      grid-template-areas: ". video .";
+      grid-template-columns: auto 80% auto; } }
   @media (min-width: 1176px) {
     #everrain-video {
       grid-template-columns: auto 70% auto; } }
@@ -1178,25 +1225,25 @@ a:link {
     padding: 20px 0; }
     @media (min-width: 741px) {
       #everrain-video article {
-        padding: 0;
-        margin: -5px 0 0; } }
+        margin: -5px 0 0;
+        padding: 0; } }
 
 #about {
   background-color: #262626; }
   #about button {
+    animation: none;
     background-color: #262626;
-    border: none;
-    outline: none;
     background-color: transparent;
-    animation: none; }
+    border: none;
+    outline: none; }
     #about button div {
       background-image: url("../img/nav/logo.png");
-      height: 35px;
-      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 10px 0; }
+      height: 35px;
+      margin: 10px 0;
+      width: 40px; }
   #about #off-canvas-container div #nav-container nav ul li {
     font-size: 1.25rem; }
     @media (min-width: 741px) {
@@ -1205,56 +1252,42 @@ a:link {
     @media (min-width: 950px) {
       #about #off-canvas-container div #nav-container nav ul li {
         font-size: 1.875rem; } }
-  @media (min-width: 549px) {
-    #about #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      display: flex;
-      justify-content: center; } }
-  @media (min-width: 741px) {
-    #about #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      margin-top: -10px; } }
-  #about #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-    background-image: url("../img/games/village_logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 225px; }
-    @media (min-width: 549px) {
-      #about #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        width: 75%; } }
-    @media (min-width: 950px) {
-      #about #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        height: 275px; } }
+  #about #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    display: flex;
+    justify-content: center; }
+    #about #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      background-image: url("../img/games/village_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 85%; }
+      @media (min-width: 549px) {
+        #about #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+          width: 75%; } }
   #about #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-    margin: -50px 0 0; }
-    @media (min-width: 549px) {
-      #about #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-        display: flex;
-        justify-content: center; } }
+    display: flex;
+    justify-content: center; }
     #about #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
       background-image: url("../img/games/endure_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #about #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
           width: 75%; } }
   #about #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-    margin: -90px 0 -40px; }
-    @media (min-width: 549px) {
-      #about #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-        display: flex;
-        justify-content: center;
-        margin-top: -80px; } }
+    display: flex;
+    justify-content: center; }
     #about #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
       background-image: url("../img/games/rain_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #about #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
           width: 75%; } }
@@ -1263,9 +1296,9 @@ a:link {
   background-color: #262626;
   margin-top: 55px; }
   #about-heading p {
+    color: #fff;
     font-size: 0.875rem;
-    line-height: 1.1875rem;
-    color: #fff; }
+    line-height: 1.1875rem; }
     @media (min-width: 549px) {
       #about-heading p {
         font-size: 1.25rem;
@@ -1282,8 +1315,8 @@ a:link {
   @media (min-width: 950px) {
     #members div ul {
       display: grid;
-      grid-template-columns: auto auto;
-      grid-template-areas: "adam-lg mike-lg"; } }
+      grid-template-areas: "adam-lg mike-lg";
+      grid-template-columns: auto auto; } }
   #members div ul li {
     color: #fff; }
     @media (min-width: 950px) {
@@ -1291,24 +1324,23 @@ a:link {
         margin: 10px; } }
     #members div ul li article h1 {
       font-family: 'Blinker', sans-serif;
-      font-size: 0.875rem;
+      font-size: 1rem;
       font-weight: 700;
+      letter-spacing: 0.09375rem;
       line-height: 1.4375rem;
-      margin-top: 20px;
-      display: none; }
+      margin-top: 20px; }
       @media (min-width: 549px) {
         #members div ul li article h1 {
-          font-size: 1.125rem; } }
+          font-size: 1.25rem; } }
       @media (min-width: 741px) {
         #members div ul li article h1 {
-          font-size: 1.375rem;
+          font-size: 1.5rem;
           line-height: 1.875rem; } }
     #members div ul li article h2 {
       font-family: 'Blinker', sans-serif;
       font-size: 0.875rem;
       font-weight: 400;
-      line-height: 1.4375rem;
-      display: none; }
+      line-height: 1.4375rem; }
       @media (min-width: 549px) {
         #members div ul li article h2 {
           font-size: 1.125rem; } }
@@ -1319,10 +1351,9 @@ a:link {
     #members div ul li article p {
       font-family: 'Blinker', sans-serif;
       font-size: 0.875rem;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 1.4375rem;
-      margin-top: 20px;
-      display: none; }
+      margin-top: 20px; }
       @media (min-width: 549px) {
         #members div ul li article p {
           font-size: 1.125rem; } }
@@ -1335,25 +1366,25 @@ a:link {
     @media (min-width: 549px) {
       #members div ul li:nth-child(1) {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-gap: 20px;
         grid-template-areas: "adam adam-text";
-        grid-gap: 20px; } }
+        grid-template-columns: auto auto; } }
     @media (min-width: 950px) {
       #members div ul li:nth-child(1) {
         display: block;
         grid-area: adam-lg; } }
     #members div ul li:nth-child(1) figure {
       background-image: url("../img/about/adam.png");
-      height: 400px;
-      width: 100%;
       background-position: center;
+      background-repeat: no-repeat;
       background-size: cover;
-      background-repeat: no-repeat; }
+      height: 400px;
+      width: 100%; }
       @media (min-width: 549px) {
         #members div ul li:nth-child(1) figure {
+          grid-area: adam;
           height: 300px;
-          width: 300px;
-          grid-area: adam; } }
+          width: 300px; } }
       @media (min-width: 950px) {
         #members div ul li:nth-child(1) figure {
           height: 600px;
@@ -1364,25 +1395,25 @@ a:link {
   @media (min-width: 549px) {
     #members div ul li:nth-child(2) {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-gap: 20px;
       grid-template-areas: "mike mike-text";
-      grid-gap: 20px; } }
+      grid-template-columns: auto auto; } }
   @media (min-width: 950px) {
     #members div ul li:nth-child(2) {
       display: block;
       grid-area: mike-lg; } }
   #members div ul li:nth-child(2) figure {
     background-image: url("../img/about/mike.png");
-    height: 400px;
-    width: 100%;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: no-repeat; }
+    height: 400px;
+    width: 100%; }
     @media (min-width: 549px) {
       #members div ul li:nth-child(2) figure {
+        grid-area: mike;
         height: 300px;
-        width: 300px;
-        grid-area: mike; } }
+        width: 300px; } }
     @media (min-width: 950px) {
       #members div ul li:nth-child(2) figure {
         height: 600px;
@@ -1390,32 +1421,30 @@ a:link {
   @media (min-width: 549px) {
     #members div ul li:nth-child(2) article {
       grid-area: mike-text; } }
-  @media (min-width: 950px) {
-    #members div ul li:hover, #members div ul li:active {
-      width: 50%; } }
-  #members div ul li:hover h1, #members div ul li:active h1 {
-    display: block; }
-  #members div ul li:hover h2, #members div ul li:active h2 {
-    display: block; }
-  #members div ul li:hover p, #members div ul li:active p {
-    display: block; }
 
 #gallery {
   background-color: #262626; }
+  #gallery main {
+    background-color: #262626; }
+    @media (min-width: 950px) {
+      #gallery main {
+        display: grid;
+        grid-template-areas: ". concepts figures .";
+        grid-template-columns: 5% auto auto 5%; } }
   #gallery button {
+    animation: none;
     background-color: #262626;
-    border: none;
-    outline: none;
     background-color: transparent;
-    animation: none; }
+    border: none;
+    outline: none; }
     #gallery button div {
       background-image: url("../img/nav/logo.png");
-      height: 35px;
-      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 10px 0; }
+      height: 35px;
+      margin: 10px 0;
+      width: 40px; }
   #gallery #off-canvas-container div #nav-container nav ul li {
     font-size: 1.25rem; }
     @media (min-width: 741px) {
@@ -1424,124 +1453,240 @@ a:link {
     @media (min-width: 950px) {
       #gallery #off-canvas-container div #nav-container nav ul li {
         font-size: 1.875rem; } }
-  @media (min-width: 549px) {
-    #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      display: flex;
-      justify-content: center; } }
-  @media (min-width: 741px) {
-    #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      margin-top: -10px; } }
-  #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-    background-image: url("../img/games/village_logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 225px; }
-    @media (min-width: 549px) {
-      #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        width: 75%; } }
-    @media (min-width: 950px) {
-      #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        height: 275px; } }
+  #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    display: flex;
+    justify-content: center; }
+    #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      background-image: url("../img/games/village_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 85%; }
+      @media (min-width: 549px) {
+        #gallery #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+          width: 75%; } }
   #gallery #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-    margin: -50px 0 0; }
-    @media (min-width: 549px) {
-      #gallery #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-        display: flex;
-        justify-content: center; } }
+    display: flex;
+    justify-content: center; }
     #gallery #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
       background-image: url("../img/games/endure_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #gallery #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
           width: 75%; } }
   #gallery #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-    margin: -90px 0 -40px; }
-    @media (min-width: 549px) {
-      #gallery #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-        display: flex;
-        justify-content: center;
-        margin-top: -80px; } }
+    display: flex;
+    justify-content: center; }
     #gallery #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
       background-image: url("../img/games/rain_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #gallery #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
           width: 75%; } }
 
-#concept div ul li:nth-child(1) {
-  background-image: url("../img/gallery/concept/concept_1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 450px;
-  width: 100%; }
+#concept {
+  background-color: #262626;
+  margin-top: 25px; }
+  @media (min-width: 950px) {
+    #concept {
+      grid-area: concepts; } }
+  #concept div h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    text-align: center; }
+  #concept div aside {
+    display: flex;
+    justify-content: center; }
+    #concept div aside button {
+      font-size: 1.25rem;
+      margin-bottom: 20px; }
+      @media (min-width: 549px) {
+        #concept div aside button {
+          font-size: 1.5625rem; } }
+      @media (min-width: 950px) {
+        #concept div aside button {
+          font-size: 1.875rem; } }
+      #concept div aside button a {
+        border: 1px #fff solid;
+        border-radius: 10px;
+        color: #fff;
+        padding: 10px; }
+      #concept div aside button a:active,
+      #concept div aside button a:hover {
+        border-color: #D56B26;
+        color: #D56B26; }
+  #concept div ul {
+    margin-top: 20px; }
+    @media (min-width: 741px) {
+      #concept div ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "figure-1 figure-2 figure-3";
+        grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 950px) {
+      #concept div ul {
+        display: block; } }
+    #concept div ul li {
+      margin: 20px 0; }
+    #concept div ul li:nth-child(1) {
+      background-image: url("../img/gallery/concept/concept_1.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 450px;
+      width: 100%; }
+      @media (min-width: 741px) {
+        #concept div ul li:nth-child(1) {
+          grid-area: figure-1;
+          height: 300px; } }
+      @media (min-width: 950px) {
+        #concept div ul li:nth-child(1) {
+          height: 700px; } }
+    #concept div ul li:nth-child(2) {
+      background-image: url("../img/gallery/concept/concept_2.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 450px;
+      width: 100%; }
+      @media (min-width: 741px) {
+        #concept div ul li:nth-child(2) {
+          grid-area: figure-2;
+          height: 300px; } }
+      @media (min-width: 950px) {
+        #concept div ul li:nth-child(2) {
+          height: 700px; } }
+    #concept div ul li:nth-child(3) {
+      background-image: url("../img/gallery/concept/concept_3.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 450px;
+      width: 100%; }
+      @media (min-width: 741px) {
+        #concept div ul li:nth-child(3) {
+          grid-area: figure-3;
+          height: 300px; } }
+      @media (min-width: 950px) {
+        #concept div ul li:nth-child(3) {
+          height: 700px; } }
 
-#concept div ul li:nth-child(2) {
-  background-image: url("../img/gallery/concept/concept_2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 450px;
-  width: 100%; }
-
-#concept div ul li:nth-child(3) {
-  background-image: url("../img/gallery/concept/concept_3.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 450px;
-  width: 100%; }
-
-#miniatures div ul li:nth-child(1) {
-  background-image: url("../img/gallery/miniatures/mini_1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 450px;
-  width: 100%; }
-
-#miniatures div ul li:nth-child(2) {
-  background-image: url("../img/gallery/miniatures/mini_2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 450px;
-  width: 100%; }
-
-#miniatures div ul li:nth-child(3) {
-  background-image: url("../img/gallery/miniatures/mini_3.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 450px;
-  width: 100%; }
+#miniatures {
+  background-color: #262626;
+  padding-top: 45px; }
+  @media (min-width: 950px) {
+    #miniatures {
+      grid-area: figures;
+      margin-top: 25px;
+      padding-top: 0; } }
+  #miniatures div h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    text-align: center; }
+  #miniatures div aside {
+    display: flex;
+    justify-content: center; }
+    #miniatures div aside button {
+      font-size: 1.25rem;
+      margin-bottom: 20px; }
+      @media (min-width: 549px) {
+        #miniatures div aside button {
+          font-size: 1.5625rem; } }
+      @media (min-width: 950px) {
+        #miniatures div aside button {
+          font-size: 1.875rem; } }
+      #miniatures div aside button a {
+        border: 1px #fff solid;
+        border-radius: 10px;
+        color: #fff;
+        padding: 10px; }
+      #miniatures div aside button a:active,
+      #miniatures div aside button a:hover {
+        border-color: #D56B26;
+        color: #D56B26; }
+  #miniatures div ul {
+    margin-top: 20px; }
+    @media (min-width: 741px) {
+      #miniatures div ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "mini-1 mini-2 mini-3";
+        grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 950px) {
+      #miniatures div ul {
+        display: block; } }
+    #miniatures div ul li {
+      margin: 20px 0; }
+    #miniatures div ul li:nth-child(1) {
+      background-image: url("../img/gallery/miniatures/mini_1.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 450px;
+      width: 100%; }
+      @media (min-width: 741px) {
+        #miniatures div ul li:nth-child(1) {
+          grid-area: mini-1;
+          height: 300px; } }
+      @media (min-width: 950px) {
+        #miniatures div ul li:nth-child(1) {
+          height: 700px; } }
+    #miniatures div ul li:nth-child(2) {
+      background-image: url("../img/gallery/miniatures/mini_2.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 450px;
+      width: 100%; }
+      @media (min-width: 741px) {
+        #miniatures div ul li:nth-child(2) {
+          grid-area: mini-2;
+          height: 300px; } }
+      @media (min-width: 950px) {
+        #miniatures div ul li:nth-child(2) {
+          height: 700px; } }
+    #miniatures div ul li:nth-child(3) {
+      background-image: url("../img/gallery/miniatures/mini_3.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 450px;
+      width: 100%; }
+      @media (min-width: 741px) {
+        #miniatures div ul li:nth-child(3) {
+          grid-area: mini-3;
+          height: 300px; } }
+      @media (min-width: 950px) {
+        #miniatures div ul li:nth-child(3) {
+          height: 700px; } }
 
 #store {
   background-color: #262626; }
   #store button {
+    animation: none;
     background-color: #262626;
-    border: none;
-    outline: none;
     background-color: transparent;
-    animation: none; }
+    border: none;
+    outline: none; }
     #store button div {
       background-image: url("../img/nav/logo.png");
-      height: 35px;
-      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 10px 0; }
+      height: 35px;
+      margin: 10px 0;
+      width: 40px; }
   #store #off-canvas-container div #nav-container nav ul li {
     font-size: 1.25rem; }
     @media (min-width: 741px) {
@@ -1550,116 +1695,277 @@ a:link {
     @media (min-width: 950px) {
       #store #off-canvas-container div #nav-container nav ul li {
         font-size: 1.875rem; } }
-  @media (min-width: 549px) {
-    #store #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      display: flex;
-      justify-content: center; } }
-  @media (min-width: 741px) {
-    #store #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      margin-top: -10px; } }
-  #store #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-    background-image: url("../img/games/village_logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 225px; }
-    @media (min-width: 549px) {
-      #store #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        width: 75%; } }
-    @media (min-width: 950px) {
-      #store #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        height: 275px; } }
+  #store #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    display: flex;
+    justify-content: center; }
+    #store #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      background-image: url("../img/games/village_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 85%; }
+      @media (min-width: 549px) {
+        #store #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+          width: 75%; } }
   #store #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-    margin: -50px 0 0; }
-    @media (min-width: 549px) {
-      #store #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-        display: flex;
-        justify-content: center; } }
+    display: flex;
+    justify-content: center; }
     #store #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
       background-image: url("../img/games/endure_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #store #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
           width: 75%; } }
   #store #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-    margin: -90px 0 -40px; }
-    @media (min-width: 549px) {
-      #store #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-        display: flex;
-        justify-content: center;
-        margin-top: -80px; } }
+    display: flex;
+    justify-content: center; }
     #store #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
       background-image: url("../img/games/rain_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #store #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
           width: 75%; } }
 
-#store-page div ul li:nth-child(1) figure {
-  background-image: url("../img/store/base_game.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 550px;
-  width: 100%; }
-
-#store-page div ul li:nth-child(2) figure {
-  background-image: url("../img/store/fear.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  width: 100%; }
-
-#store-page div ul li:nth-child(3) figure {
-  background-image: url("../img/store/despair.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  width: 100%; }
-
-#store-page div ul li:nth-child(4) figure {
-  background-image: url("../img/store/doom.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  width: 100%; }
-
-#store-page div ul li:nth-child(5) figure {
-  background-image: url("../img/store/dread.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  width: 100%; }
+#store-page {
+  background-color: #262626;
+  color: #fff; }
+  @media (min-width: 1176px) {
+    #store-page {
+      display: grid;
+      grid-template-areas: ". store-content .";
+      grid-template-columns: auto 1000px auto; } }
+  #store-page div {
+    padding: 55px 0 40px; }
+    @media (min-width: 1176px) {
+      #store-page div {
+        grid-area: store-content; } }
+    #store-page div h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.25rem;
+      padding-bottom: 40px;
+      text-align: center; }
+      @media (min-width: 741px) {
+        #store-page div h1 {
+          font-size: 2.75rem;
+          letter-spacing: 0.4375rem; } }
+      @media (min-width: 950px) {
+        #store-page div h1 {
+          font-size: 4rem;
+          letter-spacing: 0.625rem; } }
+    #store-page div ul {
+      display: grid;
+      grid-template-areas: "purchase-1 purchase-1 purchase-1" "purchase-2 purchase-2 ." ". purchase-3 purchase-3" "purchase-4 purchase-4 .";
+      grid-template-columns: auto 80% auto; }
+      @media (min-width: 741px) {
+        #store-page div ul {
+          grid-template-areas: "purchase-1 purchase-1 purchase-2" "purchase-1 purchase-1 purchase-3" ". purchase-4 purchase-5";
+          grid-template-columns: 20% 40% 40%;
+          grid-template-rows: repeat(3, 1fr); } }
+      @media (min-width: 950px) {
+        #store-page div ul {
+          grid-template-areas: "purchase-2 purchase-2 . purchase-3 purchase-3" ". purchase-1 purchase-1 purchase-1 ." "purchase-4 purchase-4 . purchase-5 purchase-5";
+          grid-template-columns: 25% 10% auto 10% 25%;
+          grid-template-rows: 30% auto 30%; } }
+      #store-page div ul li {
+        margin-bottom: 40px; }
+        #store-page div ul li h2 {
+          font-family: 'Blinker', sans-serif;
+          font-size: 1rem;
+          font-weight: 600;
+          grid-area: h2;
+          letter-spacing: 0.09375rem;
+          padding-left: 15px; }
+          @media (min-width: 741px) {
+            #store-page div ul li h2 {
+              font-size: 1.1875rem; } }
+        #store-page div ul li p {
+          font-size: 0.875rem;
+          grid-area: p;
+          letter-spacing: 0.09375rem;
+          padding-left: 15px;
+          padding-top: 5px; }
+          @media (min-width: 741px) {
+            #store-page div ul li p {
+              font-size: 1.0625rem; } }
+        #store-page div ul li figure {
+          grid-area: icon;
+          margin-bottom: 20px; }
+        #store-page div ul li aside {
+          display: none;
+          grid-area: aside; }
+          #store-page div ul li aside p {
+            padding-top: 10px; }
+          #store-page div ul li aside a {
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            font-size: 1.125rem;
+            padding: 10px 0; }
+            @media (min-width: 741px) {
+              #store-page div ul li aside a {
+                font-size: 1.25rem; } }
+          #store-page div ul li aside a:active,
+          #store-page div ul li aside a:hover {
+            color: #7FD9E6; }
+      #store-page div ul li:active aside,
+      #store-page div ul li:hover aside {
+        display: block; }
+      #store-page div ul li:nth-child(1) {
+        grid-area: purchase-1;
+        text-align: center; }
+        @media (min-width: 741px) {
+          #store-page div ul li:nth-child(1) {
+            text-align: left; } }
+        @media (min-width: 950px) {
+          #store-page div ul li:nth-child(1) {
+            text-align: center; } }
+        #store-page div ul li:nth-child(1) figure {
+          background-image: url("../img/store/base_game.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 325px;
+          width: 100%; }
+          @media (min-width: 741px) {
+            #store-page div ul li:nth-child(1) figure {
+              height: 500px; } }
+      #store-page div ul li:nth-child(2) {
+        display: grid;
+        grid-area: purchase-2;
+        grid-template-areas: "icon ." "h2 h2" "p p" "aside aside";
+        grid-template-columns: 70% auto; }
+        @media (min-width: 549px) {
+          #store-page div ul li:nth-child(2) {
+            grid-template-columns: 40% auto; } }
+        @media (min-width: 741px) {
+          #store-page div ul li:nth-child(2) {
+            grid-template-areas: ". icon" "h2 h2" "p p" "aside aside";
+            grid-template-columns: 20% auto;
+            text-align: right; } }
+        @media (min-width: 950px) {
+          #store-page div ul li:nth-child(2) {
+            grid-template-areas: "icon ." "h2 h2" "p p" "aside aside";
+            grid-template-columns: auto 30%;
+            text-align: left; } }
+        #store-page div ul li:nth-child(2) figure {
+          background-image: url("../img/store/fear.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 150px;
+          width: 100%; }
+          @media (min-width: 741px) {
+            #store-page div ul li:nth-child(2) figure {
+              height: 200px; } }
+          @media (min-width: 950px) {
+            #store-page div ul li:nth-child(2) figure {
+              margin-bottom: -20px; } }
+      #store-page div ul li:nth-child(3) {
+        display: grid;
+        grid-area: purchase-3;
+        grid-template-areas: ". icon" "h2 h2" "p p" "aside aside";
+        grid-template-columns: auto 60%;
+        text-align: right; }
+        @media (min-width: 549px) {
+          #store-page div ul li:nth-child(3) {
+            grid-template-columns: auto 40%; } }
+        @media (min-width: 741px) {
+          #store-page div ul li:nth-child(3) {
+            grid-template-columns: 20% auto; } }
+        @media (min-width: 950px) {
+          #store-page div ul li:nth-child(3) {
+            grid-template-columns: 30% auto; } }
+        #store-page div ul li:nth-child(3) figure {
+          background-image: url("../img/store/despair.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 150px;
+          width: 100%; }
+          @media (min-width: 741px) {
+            #store-page div ul li:nth-child(3) figure {
+              height: 200px; } }
+          @media (min-width: 950px) {
+            #store-page div ul li:nth-child(3) figure {
+              margin-bottom: -20px; } }
+      #store-page div ul li:nth-child(4) {
+        display: grid;
+        grid-area: purchase-4;
+        grid-template-areas: "icon ." "h2 h2" "p p" "aside aside";
+        grid-template-columns: 70% auto; }
+        @media (min-width: 549px) {
+          #store-page div ul li:nth-child(4) {
+            grid-template-columns: 40% auto; } }
+        @media (min-width: 741px) {
+          #store-page div ul li:nth-child(4) {
+            grid-template-columns: auto 20%; } }
+        @media (min-width: 950px) {
+          #store-page div ul li:nth-child(4) {
+            grid-template-columns: auto 30%; } }
+        #store-page div ul li:nth-child(4) figure {
+          background-image: url("../img/store/doom.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 150px;
+          width: 100%; }
+          @media (min-width: 741px) {
+            #store-page div ul li:nth-child(4) figure {
+              height: 200px; } }
+          @media (min-width: 950px) {
+            #store-page div ul li:nth-child(4) figure {
+              margin-bottom: -20px; } }
+      #store-page div ul li:nth-child(5) {
+        display: none; }
+        @media (min-width: 741px) {
+          #store-page div ul li:nth-child(5) {
+            display: grid;
+            grid-area: purchase-5;
+            grid-template-areas: ". icon" "h2 h2" "p p" "aside aside";
+            grid-template-columns: 20% auto;
+            text-align: right; } }
+        @media (min-width: 950px) {
+          #store-page div ul li:nth-child(5) {
+            grid-template-columns: 30% auto; } }
+        #store-page div ul li:nth-child(5) figure {
+          background-image: url("../img/store/dread.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 150px;
+          width: 100%; }
+          @media (min-width: 741px) {
+            #store-page div ul li:nth-child(5) figure {
+              height: 200px; } }
+          @media (min-width: 950px) {
+            #store-page div ul li:nth-child(5) figure {
+              margin-bottom: -20px; } }
 
 #faq {
   background-color: #262626; }
   #faq button {
+    animation: none;
     background-color: #262626;
-    border: none;
-    outline: none;
     background-color: transparent;
-    animation: none; }
+    border: none;
+    outline: none; }
     #faq button div {
       background-image: url("../img/nav/logo.png");
-      height: 35px;
-      width: 40px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 10px 0; }
+      height: 35px;
+      margin: 10px 0;
+      width: 40px; }
   #faq #off-canvas-container div #nav-container nav ul li {
     font-size: 1.25rem; }
     @media (min-width: 741px) {
@@ -1668,76 +1974,190 @@ a:link {
     @media (min-width: 950px) {
       #faq #off-canvas-container div #nav-container nav ul li {
         font-size: 1.875rem; } }
-  @media (min-width: 549px) {
-    #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      display: flex;
-      justify-content: center; } }
-  @media (min-width: 741px) {
-    #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) {
-      margin-top: -10px; } }
-  #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-    background-image: url("../img/games/village_logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 225px; }
-    @media (min-width: 549px) {
-      #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        width: 75%; } }
-    @media (min-width: 950px) {
-      #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
-        height: 275px; } }
+  #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) {
+    display: flex;
+    justify-content: center; }
+    #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+      background-image: url("../img/games/village_logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 85%; }
+      @media (min-width: 549px) {
+        #faq #off-canvas-container div #nav-container nav ul li:nth-child(2) a {
+          width: 75%; } }
   #faq #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-    margin: -50px 0 0; }
-    @media (min-width: 549px) {
-      #faq #off-canvas-container div #nav-container nav ul li:nth-child(3) {
-        display: flex;
-        justify-content: center; } }
+    display: flex;
+    justify-content: center; }
     #faq #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
       background-image: url("../img/games/endure_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #faq #off-canvas-container div #nav-container nav ul li:nth-child(3) a {
           width: 75%; } }
   #faq #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-    margin: -90px 0 -40px; }
-    @media (min-width: 549px) {
-      #faq #off-canvas-container div #nav-container nav ul li:nth-child(4) {
-        display: flex;
-        justify-content: center;
-        margin-top: -80px; } }
+    display: flex;
+    justify-content: center; }
     #faq #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
       background-image: url("../img/games/rain_logo.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 200px; }
+      background-size: contain;
+      height: 75px;
+      width: 85%; }
       @media (min-width: 549px) {
         #faq #off-canvas-container div #nav-container nav ul li:nth-child(4) a {
           width: 75%; } }
 
 #questions {
-  background-color: #262626; }
-  #questions div ul li .arrow-down {
-    background-image: url("../img/nav/arrow-down.svg");
-    height: 14px;
-    width: 23px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
-  #questions div ul li .arrow-up {
-    background-image: url("../img/nav/arrow-up.svg");
-    height: 14px;
-    width: 23px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
+  background-color: #262626;
+  margin-top: 55px; }
+  #questions div ul {
+    display: grid;
+    grid-template-areas: " . question-1 ." ". question-2 ." ". question-3 ." ". question-4 ." ". question-5 .";
+    grid-template-columns: 10px auto 10px; }
+    @media (min-width: 741px) {
+      #questions div ul {
+        grid-template-columns: 10% auto 10%; } }
+    @media (min-width: 950px) {
+      #questions div ul {
+        grid-template-columns: auto 900px auto; } }
+    #questions div ul li {
+      border-top: 1px solid #fff;
+      padding-top: 5px;
+      text-align: center; }
+      #questions div ul li h1 {
+        color: #fff;
+        font-size: 1.125rem; }
+        @media (min-width: 741px) {
+          #questions div ul li h1 {
+            font-size: 1.5625rem; } }
+        @media (min-width: 950px) {
+          #questions div ul li h1 {
+            font-size: 2rem; } }
+      #questions div ul li button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; }
+      #questions div ul li .arrow-down {
+        background-image: url("../img/nav/arrow-down.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 14px;
+        width: 24px; }
+        @media (min-width: 950px) {
+          #questions div ul li .arrow-down {
+            height: 24px;
+            width: 40px; } }
+      #questions div ul li .arrow-down:active,
+      #questions div ul li .arrow-down:hover {
+        background-image: url("../img/nav/arrow-down-blue.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 14px;
+        transition: 0.25s;
+        width: 24px; }
+        @media (min-width: 950px) {
+          #questions div ul li .arrow-down:active,
+          #questions div ul li .arrow-down:hover {
+            height: 24px;
+            width: 40px; } }
+      #questions div ul li .collapsible-content {
+        margin-bottom: 20px; }
+        #questions div ul li .collapsible-content p {
+          font-size: 0.875rem;
+          text-align: left; }
+          @media (min-width: 741px) {
+            #questions div ul li .collapsible-content p {
+              font-size: 1rem;
+              text-align: center; } }
+          @media (min-width: 950px) {
+            #questions div ul li .collapsible-content p {
+              font-size: 1.375rem;
+              line-height: 1.8125rem;
+              text-align: left; } }
+    #questions div ul li:nth-child(1) {
+      border: none;
+      grid-area: question-1;
+      padding-top: 0; }
+    #questions div ul li:nth-child(2) {
+      grid-area: question-2; }
+    #questions div ul li:nth-child(3) {
+      grid-area: question-3; }
+    #questions div ul li:nth-child(4) {
+      grid-area: question-4; }
+    #questions div ul li:nth-child(5) {
+      grid-area: question-5; }
 
-#faq-submit {
+@media (min-width: 741px) {
+  #form div article {
+    display: flex;
+    justify-content: center; } }
+
+#form div article h1 {
+  color: #fff;
+  font-size: 1.125rem;
+  margin-bottom: 3px; }
+  @media (min-width: 741px) {
+    #form div article h1 {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      padding-right: 5px; } }
+  @media (min-width: 950px) {
+    #form div article h1 {
+      font-size: 1.75rem; } }
+
+#form div article h2 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 20px; }
+  @media (min-width: 741px) {
+    #form div article h2 {
+      font-size: 1.25rem; } }
+  @media (min-width: 950px) {
+    #form div article h2 {
+      font-size: 1.75rem; } }
+
+#thanks {
   background-color: #262626; }
+  #thanks div {
+    background-color: #262626;
+    display: grid;
+    grid-template-areas: ". thx-img ." ". thank-you ." ". return .";
+    grid-template-columns: 20% auto 20%;
+    margin-top: 25px; }
+    #thanks div div {
+      display: flex;
+      grid-area: thx-img;
+      justify-content: center; }
+      #thanks div div figure {
+        background-image: url("../img/nav/logo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 55px;
+        margin: 10px 0;
+        width: 60px; }
+    #thanks div h1 {
+      color: #fff;
+      font-size: 2.1875rem;
+      grid-area: thank-you;
+      text-align: center; }
+    #thanks div a {
+      background-color: #262626;
+      border: 1px #fff solid;
+      border-radius: 15px;
+      color: #fff;
+      grid-area: return;
+      padding: 10px 0; }
+    #thanks div a:active,
+    #thanks div a:hover {
+      border-color: #D56B26;
+      color: #D56B26; }

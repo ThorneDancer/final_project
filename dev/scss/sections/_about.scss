@@ -1,107 +1,88 @@
-#about{
+#about {
     background-color: $background;
-    button{
+
+    button {
+        animation: none;
         background-color: $background;
+        background-color: transparent;
         border: none;
         outline: none;
-        background-color: transparent;
-        animation: none;
-        div{
+
+        div {
             background-image: url("../img/nav/logo.png");
-            height: 35px;
-            width: 40px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            height: 35px;
             margin: 10px 0;
+            width: 40px;
         }
     }
-    #off-canvas-container{
-        div{
-            #nav-container{
-                nav{
-                    ul{
-                        li{
-                            font-size: rem-calc(20);
 
-                            @include md{
+    #off-canvas-container {
+        div {
+            #nav-container {
+                nav {
+                    ul {
+                        li {
+                            font-size: rem-calc(20);
+                            @include md {
                                 font-size: rem-calc(24);
                             }
-                            @include lg{
+                            @include lg {
                                 font-size: rem-calc(30);
                             }
                         }
 
-                        li:nth-child(2){
+                        li:nth-child(2) {
+                            display: flex;
+                            justify-content: center;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
+                            a {
+                                background-image: url("../img/games/village_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 100px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-
-                            @include md{
-                                margin-top: -10px;
-                            }
-
-                            a{
-                                    background-image: url("../img/games/village_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 225px;
-
-                                    @include sm{
-                                        width: 75%;
-                                    }
-                                    @include lg{
-                                        height: 275px;
-                                    }
-                            }
-
                         }
-                        li:nth-child(3){
-                            margin: -50px 0 0;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
+                        li:nth-child(3) {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                background-image: url("../img/games/endure_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 75px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-                            a{
-                                    background-image: url("../img/games/endure_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 200px;
-
-                                    @include sm{
-                                        width: 75%
-                                    }
-                            }
-
                         }
-                        li:nth-child(4){
-                            margin: -90px 0 -40px;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
-                                margin-top: -80px;
+                        li:nth-child(4) {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                background-image: url("../img/games/rain_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 75px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-                            a{
-                                    background-image: url("../img/games/rain_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 200px;
-
-                                    @include sm{
-                                        width: 75%
-                                    }
-                            }
-
                         }
                     }
                 }
@@ -109,187 +90,167 @@
         }
     }
 }
-#about-heading{
+
+#about-heading {
     background-color: $background;
     margin-top: 55px;
-    p{
+
+    p {
+        color: $white;
         font-size: rem-calc(14);
         line-height: rem-calc(19);
-        color: $white;
-
-        @include sm{
+        @include sm {
             font-size: rem-calc(20);
             line-height: rem-calc(24);
         }
-        @include md{
+        @include md {
             font-size: rem-calc(24);
             line-height: rem-calc(29);
         }
     }
-    p:nth-child(2){
+
+    p:nth-child(2) {
         margin: 20px 0;
     }
 }
-#members{
+
+#members {
     background-color: $background;
-    div{
-        ul{
 
-            @include lg{
+    div {
+        ul {
+            @include lg {
                 display: grid;
-                grid-template-columns: auto auto;
                 grid-template-areas: "adam-lg mike-lg";
-
+                grid-template-columns: auto auto;
             }
-            li{
-                color: $white;
 
-                @include lg{
+            li {
+                color: $white;
+                @include lg {
                     margin: 10px;
                 }
 
-                article{
-
-                    h1{
+                article {
+                    h1 {
                         font-family: 'Blinker', sans-serif;
-                        font-size: rem-calc(14);
+                        font-size: rem-calc(16);
                         font-weight: 700;
+                        letter-spacing: rem-calc(1.5);
                         line-height: rem-calc(23);
                         margin-top: 20px;
-                        display: none;
-
-                        @include sm{
-                            font-size: rem-calc(18);
+                        @include sm {
+                            font-size: rem-calc(20);
                         }
-                        @include md{
-                            font-size: rem-calc(22);
+                        @include md {
+                            font-size: rem-calc(24);
                             line-height: rem-calc(30);
                         }
                     }
-                    h2{
+
+                    h2 {
                         font-family: 'Blinker', sans-serif;
                         font-size: rem-calc(14);
                         font-weight: 400;
                         line-height: rem-calc(23);
-                        display: none;
-
-                        @include sm{
+                        @include sm {
                             font-size: rem-calc(18);
                         }
-                        @include md{
+                        @include md {
                             font-size: rem-calc(22);
                             line-height: rem-calc(30);
                         }
                     }
-                    p{
+
+                    p {
                         font-family: 'Blinker', sans-serif;
                         font-size: rem-calc(14);
-                        font-weight: 400;
+                        font-weight: 300;
                         line-height: rem-calc(23);
                         margin-top: 20px;
-                        display: none;
-
-                        @include sm{
+                        @include sm {
                             font-size: rem-calc(18);
                         }
-                        @include md{
+                        @include md {
                             font-size: rem-calc(22);
                             line-height: rem-calc(30);
                         }
                     }
                 }
             }
-            li:nth-child(1){
-                margin-bottom: 20px;
 
-                @include sm{
+            li:nth-child(1) {
+                margin-bottom: 20px;
+                @include sm {
                     display: grid;
-                    grid-template-columns: auto auto;
-                    grid-template-areas: "adam adam-text";
                     grid-gap: 20px;
+                    grid-template-areas: "adam adam-text";
+                    grid-template-columns: auto auto;
                 }
-                @include lg{
+                @include lg {
                     display: block;
                     grid-area: adam-lg;
                 }
 
-                figure{
+                figure {
                     background-image: url("../img/about/adam.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     height: 400px;
                     width: 100%;
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-
-                    @include sm{
+                    @include sm {
+                        grid-area: adam;
                         height: 300px;
                         width: 300px;
-                        grid-area: adam;
                     }
-                    @include lg{
+                    @include lg {
                         height: 600px;
                         width: 100%;
                     }
                 }
-                article{
 
-                    @include sm{
+                article {
+                    @include sm {
                         grid-area: adam-text;
                     }
                 }
             }
-            li:nth-child(2){
 
-                @include sm{
+            li:nth-child(2) {
+                @include sm {
                     display: grid;
-                    grid-template-columns: auto auto;
-                    grid-template-areas: "mike mike-text";
                     grid-gap: 20px;
+                    grid-template-areas: "mike mike-text";
+                    grid-template-columns: auto auto;
                 }
-                @include lg{
+                @include lg {
                     display: block;
                     grid-area: mike-lg;
                 }
-                figure{
+
+                figure {
                     background-image: url("../img/about/mike.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     height: 400px;
                     width: 100%;
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-
-                    @include sm{
+                    @include sm {
+                        grid-area: mike;
                         height: 300px;
                         width: 300px;
-                        grid-area: mike;
                     }
-                    @include lg{
+                    @include lg {
                         height: 600px;
                         width: 100%;
                     }
                 }
-                article{
 
-                    @include sm{
+                article {
+                    @include sm {
                         grid-area: mike-text;
                     }
-                }
-            }
-            li:hover,li:active{
-
-                @include lg{
-                    width: 50%;
-                }
-
-                figure{}
-                h1{
-                    display: block;
-                }
-                h2{
-                    display: block;
-                }
-                p{
-                    display: block;
                 }
             }
         }

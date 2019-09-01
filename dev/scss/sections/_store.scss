@@ -1,107 +1,88 @@
-#store{
+#store {
     background-color: $background;
-    button{
+
+    button {
+        animation: none;
         background-color: $background;
+        background-color: transparent;
         border: none;
         outline: none;
-        background-color: transparent;
-        animation: none;
-        div{
+
+        div {
             background-image: url("../img/nav/logo.png");
-            height: 35px;
-            width: 40px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            height: 35px;
             margin: 10px 0;
+            width: 40px;
         }
     }
-    #off-canvas-container{
-        div{
-            #nav-container{
-                nav{
-                    ul{
-                        li{
-                            font-size: rem-calc(20);
 
-                            @include md{
+    #off-canvas-container {
+        div {
+            #nav-container {
+                nav {
+                    ul {
+                        li {
+                            font-size: rem-calc(20);
+                            @include md {
                                 font-size: rem-calc(24);
                             }
-                            @include lg{
+                            @include lg {
                                 font-size: rem-calc(30);
                             }
                         }
 
-                        li:nth-child(2){
+                        li:nth-child(2) {
+                            display: flex;
+                            justify-content: center;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
+                            a {
+                                background-image: url("../img/games/village_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 100px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-
-                            @include md{
-                                margin-top: -10px;
-                            }
-
-                            a{
-                                    background-image: url("../img/games/village_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 225px;
-
-                                    @include sm{
-                                        width: 75%;
-                                    }
-                                    @include lg{
-                                        height: 275px;
-                                    }
-                            }
-
                         }
-                        li:nth-child(3){
-                            margin: -50px 0 0;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
+                        li:nth-child(3) {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                background-image: url("../img/games/endure_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 75px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-                            a{
-                                    background-image: url("../img/games/endure_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 200px;
-
-                                    @include sm{
-                                        width: 75%
-                                    }
-                            }
-
                         }
-                        li:nth-child(4){
-                            margin: -90px 0 -40px;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
-                                margin-top: -80px;
+                        li:nth-child(4) {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                background-image: url("../img/games/rain_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 75px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-                            a{
-                                    background-image: url("../img/games/rain_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 200px;
-
-                                    @include sm{
-                                        width: 75%
-                                    }
-                            }
-
                         }
                     }
                 }
@@ -109,57 +90,263 @@
         }
     }
 }
-#store-page{
-    div{
-        ul{
-            li:nth-child(1){
-                figure{
+
+#store-page {
+    background-color: $background;
+    color: $white;
+    @include xl {
+        display: grid;
+        grid-template-areas: ". store-content .";
+        grid-template-columns: auto 1000px auto;
+    }
+
+    div {
+        padding: 55px 0 40px;
+        @include xl {
+            grid-area: store-content;
+        }
+
+        h1 {
+            font-size: rem-calc(24);
+            font-weight: 400;
+            letter-spacing: rem-calc(4);
+            padding-bottom: 40px;
+            text-align: center;
+            @include md {
+                font-size: rem-calc(44);
+                letter-spacing: rem-calc(7);
+            }
+            @include lg {
+                font-size: rem-calc(64);
+                letter-spacing: rem-calc(10);
+            }
+        }
+
+        ul {
+            display: grid;
+            grid-template-areas: "purchase-1 purchase-1 purchase-1" "purchase-2 purchase-2 ." ". purchase-3 purchase-3" "purchase-4 purchase-4 .";
+            grid-template-columns: auto 80% auto;
+            @include md {
+                grid-template-areas: "purchase-1 purchase-1 purchase-2" "purchase-1 purchase-1 purchase-3" ". purchase-4 purchase-5";
+                grid-template-columns: 20% 40% 40%;
+                grid-template-rows: repeat(3,1fr);
+            }
+            @include lg {
+                grid-template-areas: "purchase-2 purchase-2 . purchase-3 purchase-3" ". purchase-1 purchase-1 purchase-1 ." "purchase-4 purchase-4 . purchase-5 purchase-5";
+                grid-template-columns: 25% 10% auto 10% 25%;
+                grid-template-rows: 30% auto 30%;
+            }
+
+            li {
+                margin-bottom: 40px;
+
+                h2 {
+                    font-family: 'Blinker', sans-serif;
+                    font-size: rem-calc(16);
+                    font-weight: 600;
+                    grid-area: h2;
+                    letter-spacing: rem-calc(1.5);
+                    padding-left: 15px;
+                    @include md {
+                        font-size: rem-calc(19);
+                    }
+                }
+
+                p {
+                    font-size: rem-calc(14);
+                    grid-area: p;
+                    letter-spacing: rem-calc(1.5);
+                    padding-left: 15px;
+                    padding-top: 5px;
+                    @include md {
+                        font-size: rem-calc(17);
+                    }
+                }
+
+                figure {
+                    grid-area: icon;
+                    margin-bottom: 20px;
+                }
+
+                aside {
+                    display: none;
+                    grid-area: aside;
+
+                    p {
+                        padding-top: 10px;
+                    }
+
+                    a {
+                        border-bottom: 1px solid $white;
+                        color: $white;
+                        font-size: rem-calc(18);
+                        padding: 10px 0;
+                        @include md {
+                            font-size: rem-calc(20);
+                        }
+                    }
+
+                    a:active,
+                    a:hover {
+                        color: $blue;
+                    }
+                }
+            }
+
+            li:active,
+            li:hover {
+                aside {
+                    display: block;
+                }
+            }
+
+            li:nth-child(1) {
+                grid-area: purchase-1;
+                text-align: center;
+                @include md {
+                    text-align: left;
+                }
+                @include lg {
+                    text-align: center;
+                }
+
+                figure {
                     background-image: url("../img/store/base_game.png");
                     background-position: center;
                     background-repeat: no-repeat;
-                    background-size: cover;
-                    height: 550px;
+                    background-size: contain;
+                    height: 325px;
                     width: 100%;
+                    @include md {
+                        height: 500px;
+                    }
                 }
             }
-            li:nth-child(2){
-                figure{
+
+            li:nth-child(2) {
+                display: grid;
+                grid-area: purchase-2;
+                grid-template-areas: "icon ." "h2 h2" "p p" "aside aside";
+                grid-template-columns: 70% auto;
+                @include sm {
+                    grid-template-columns: 40% auto;
+                }
+                @include md {
+                    grid-template-areas: ". icon" "h2 h2" "p p" "aside aside";
+                    grid-template-columns: 20% auto;
+                    text-align: right;
+                }
+                @include lg {
+                    grid-template-areas: "icon ." "h2 h2" "p p" "aside aside";
+                    grid-template-columns: auto 30%;
+                    text-align: left;
+                }
+
+                figure {
                     background-image: url("../img/store/fear.png");
                     background-position: center;
                     background-repeat: no-repeat;
-                    background-size: cover;
-                    height: 300px;
+                    background-size: contain;
+                    height: 150px;
                     width: 100%;
+                    @include md {
+                        height: 200px;
+                    }
+                    @include lg {
+                        margin-bottom: -20px;
+                    }
                 }
             }
-            li:nth-child(3){
-                figure{
+
+            li:nth-child(3) {
+                display: grid;
+                grid-area: purchase-3;
+                grid-template-areas: ". icon" "h2 h2" "p p" "aside aside";
+                grid-template-columns: auto 60%;
+                text-align: right;
+                @include sm {
+                    grid-template-columns: auto 40%;
+                }
+                @include md {
+                    grid-template-columns: 20% auto;
+                }
+                @include lg {
+                    grid-template-columns: 30% auto;
+                }
+
+                figure {
                     background-image: url("../img/store/despair.png");
                     background-position: center;
                     background-repeat: no-repeat;
-                    background-size: cover;
-                    height: 300px;
+                    background-size: contain;
+                    height: 150px;
                     width: 100%;
+                    @include md {
+                        height: 200px;
+                    }
+                    @include lg {
+                        margin-bottom: -20px;
+                    }
                 }
             }
-            li:nth-child(4){
-                figure{
+
+            li:nth-child(4) {
+                display: grid;
+                grid-area: purchase-4;
+                grid-template-areas: "icon ." "h2 h2" "p p" "aside aside";
+                grid-template-columns: 70% auto;
+                @include sm {
+                    grid-template-columns: 40% auto;
+                }
+                @include md {
+                    grid-template-columns: auto 20%;
+                }
+                @include lg {
+                    grid-template-columns: auto 30%;
+                }
+
+                figure {
                     background-image: url("../img/store/doom.png");
                     background-position: center;
                     background-repeat: no-repeat;
-                    background-size: cover;
-                    height: 300px;
+                    background-size: contain;
+                    height: 150px;
                     width: 100%;
+                    @include md {
+                        height: 200px;
+                    }
+                    @include lg {
+                        margin-bottom: -20px;
+                    }
                 }
             }
-            li:nth-child(5){
-                figure{
+
+            li:nth-child(5) {
+                display: none;
+                @include md {
+                    display: grid;
+                    grid-area: purchase-5;
+                    grid-template-areas: ". icon" "h2 h2" "p p" "aside aside";
+                    grid-template-columns: 20% auto;
+                    text-align: right;
+                }
+                @include lg {
+                    grid-template-columns: 30% auto;
+                }
+
+                figure {
                     background-image: url("../img/store/dread.png");
                     background-position: center;
                     background-repeat: no-repeat;
-                    background-size: cover;
-                    height: 300px;
+                    background-size: contain;
+                    height: 150px;
                     width: 100%;
+                    @include md {
+                        height: 200px;
+                    }
+                    @include lg {
+                        margin-bottom: -20px;
+                    }
                 }
             }
         }

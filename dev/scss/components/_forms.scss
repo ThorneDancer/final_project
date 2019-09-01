@@ -16,3 +16,97 @@ input[type=password],
 textarea {
     -webkit-appearance: none;
 }
+#form {
+	background-color: $background;
+	display: grid;
+	grid-template-columns: 10px auto 10px;
+	grid-template-areas: ". form .";
+	padding: 40px 0;
+	@include md {
+		grid-template-columns: auto 90% auto;
+	}
+	@include lg {
+		grid-template-columns: auto 75% auto;
+	}
+	@include xl {
+		grid-template-columns: auto 60% auto;
+	}
+
+	> div {
+		grid-area: form;
+
+
+		form{
+		    display: grid;
+
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+			"first first"
+			"last last"
+			"email email"
+			"comment comment"
+			"button button";
+			grid-gap: 20px;
+
+			@include md{
+				grid-template-areas: "first comment" "last comment" "email comment" "button button";
+			}
+
+			input{
+				width: 96%;
+				border: 1px solid $white;
+				border-radius: 5px;
+				padding: 1%;
+				padding-left: 3%;
+				height: 30px;
+				background-color: $background;
+				color: $white;
+			}
+
+			textarea{
+				width: 98%;
+				border: none;
+				padding: 1%;
+				height: 200px;
+			}
+
+
+			div:nth-child(1){
+				grid-area: first;
+			}
+
+			div:nth-child(2){
+				grid-area: last;
+			}
+
+			div:nth-child(3){
+				grid-area: email;
+			}
+
+			div:nth-child(4){
+				grid-area: comment;
+			}
+
+			div:nth-child(5){
+				grid-area: button;
+				text-align: center;
+				button{
+					border: 1px $white solid;
+					border-radius: 15px;
+					color: $white;
+					background-color: $background;
+					padding: 10px 20px;
+
+					@include lg{
+						font-size: rem-calc(22);
+					}
+				}
+				button:hover,button:active{
+	                color: $orange;
+	                border-color: $orange;
+	            }
+			}
+		}
+	}
+
+}

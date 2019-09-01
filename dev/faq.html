@@ -8,7 +8,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ec74ad8b66.js"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Blinker|Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Blinker:300,400,600,700|Play&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Grimlord - FAQ</title>
 </head>
@@ -49,51 +49,101 @@
                 <ul>
                     <li>
                         <h1>What size are the miniatures?</h1>
-                        <figure class="arrow-down"></figure>
-                        <p>The majority of the minis are 35mm from base to eye level.</p>
-                        <p>The Icarus and Jaeger GEPS are 40mm from base to eye level.</p>
-                        <p>The Solomen and The Preacher are 45mm from base to eye level.</p>
-                        <p>The Titan, The Primus, The Olympian, & the Exloader are 60mm from base to eye level.</p>
-                        <figure class="arrow-up"></figure>
+                        <button class="collapsible">
+                            <figure class="arrow-down"></figure>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>The majority of the minis are 35mm from base to eye level.</p>
+                            <p>The Icarus and Jaeger GEPS are 40mm from base to eye level.</p>
+                            <p>The Solomen and The Preacher are 45mm from base to eye level.</p>
+                            <p>The Titan, The Primus, The Olympian, & the Exloader are 60mm from base to eye level.</p>
+                        </div>
+                        <!-- <figure class="arrow-up"></figure> -->
                     </li>
                     <li>
                         <h1>What are the miniatures made of?</h1>
-                        <figure class="arrow-down"></figure>
-                        <p>All our miniatures are made from high quality PVC (plastic).</p>
-                        <figure class="arrow-up"></figure>
+                        <button class="collapsible">
+                            <figure class="arrow-down"></figure>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>All our miniatures are made from high quality PVC (plastic).</p>
+                        </div>
+                        <!-- <figure class="arrow-up"></figure> -->
                     </li>
                     <li>
                         <h1>Do the miniatures require assembly?</h1>
-                        <figure class="arrow-down"></figure>
-                        <p>All minis are pre-assembled so there is no need to spend hours constructing them and sticking your fingers together with super glue. :)</p>
-                        <figure class="arrow-up"></figure>
+                        <button class="collapsible">
+                            <figure class="arrow-down"></figure>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>All minis are pre-assembled so there is no need to spend hours constructing them and sticking your fingers together with super glue. :)</p>
+                        </div>
+                        <!-- <figure class="arrow-up"></figure> -->
                     </li>
                     <li>
                         <h1>Why should I buy an expansion?</h1>
-                        <figure class="arrow-down"></figure>
-                        <p>All expansion packs come with a slew of new abilities, classes, boards, enemies, and missions that allow for much more replayability with the base game.</p>
-                        <figure class="arrow-up"></figure>
+                        <button class="collapsible">
+                            <figure class="arrow-down"></figure>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>All expansion packs come with a slew of new abilities, classes, boards, enemies, and missions that allow for much more replayability with the base game.</p>
+                        </div>
+                        <!-- <figure class="arrow-up"></figure> -->
                     </li>
                     <li>
                         <h1>What is the size of the game tiles?</h1>
-                        <figure class="arrow-down"></figure>
-                        <p>25cm x 25cm. You will recieve 12 double-sided tiles.</p>
-                        <figure class="arrow-up"></figure>
+                        <button class="collapsible">
+                            <figure class="arrow-down"></figure>
+                        </button>
+                        <div class="collapsible-content">
+                            <p>25cm x 25cm. You will recieve 12 double-sided tiles.</p>
+                        </div>
+                        <!-- <figure class="arrow-up"></figure> -->
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="project-grid" id="faq-submit">
-            <div>
-                <form action="/action_page.php">
-                    <input type="text" name="firstname" placeholder="First Name">
-                    <input type="text" name="lastname" placeholder="Last Name">
-                    <input type="text" name="email" placeholder="Email">
-                    <input type="text" placeholder=" Type your message here . . . ">
-                </form>
-            </div>
-        </section>
+        <section class="section-content" id="form">
+                <div>
+                    <article>
+                        <h1>Have your own questions?</h1>
+                        <h2>Submit it here!</h2>
+                    </article>
+                    <div class="divide"></div>
+                    <form action="https://formspree.io/akj55@drexel.edu" method="POST">
+                        <!-- First Name -->
+                        <div>
+                            <label>
+                                <input type="text" placeholder="First Name" name="First Name">
+                                <input type="hidden" name="_next" value="http://www.johnsonmaps.com//web2/final/dev/thanks.html">
+                                <input type="text" name="_gotcha" style="display:none">
+                            </label>
+                        </div>
+                        <!-- last name -->
+                        <div>
+                            <label>
+                                <input type="text" placeholder="Last Name" name="Last Name">
+                            </label>
+                        </div>
+                        <!-- email -->
+                        <div>
+                            <label>
+                                <input type="email" placeholder="Email" name="Email" required>
+                            </label>
+                        </div>
+                        <!-- comment -->
+                        <div>
+                            <label>
+                                <textarea placeholder="Type your message here . . ." name="Comment"></textarea>
+                            </label>
+                        </div>
+                        <div>
+                            <button type="submit" class="button" value="send">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
     </main>
 
 

@@ -1,107 +1,88 @@
-#faq{
+#faq {
     background-color: $background;
-    button{
+
+    button {
+        animation: none;
         background-color: $background;
+        background-color: transparent;
         border: none;
         outline: none;
-        background-color: transparent;
-        animation: none;
-        div{
+
+        div {
             background-image: url("../img/nav/logo.png");
-            height: 35px;
-            width: 40px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            height: 35px;
             margin: 10px 0;
+            width: 40px;
         }
     }
-    #off-canvas-container{
-        div{
-            #nav-container{
-                nav{
-                    ul{
-                        li{
-                            font-size: rem-calc(20);
 
-                            @include md{
+    #off-canvas-container {
+        div {
+            #nav-container {
+                nav {
+                    ul {
+                        li {
+                            font-size: rem-calc(20);
+                            @include md {
                                 font-size: rem-calc(24);
                             }
-                            @include lg{
+                            @include lg {
                                 font-size: rem-calc(30);
                             }
                         }
 
-                        li:nth-child(2){
+                        li:nth-child(2) {
+                            display: flex;
+                            justify-content: center;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
+                            a {
+                                background-image: url("../img/games/village_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 100px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-
-                            @include md{
-                                margin-top: -10px;
-                            }
-
-                            a{
-                                    background-image: url("../img/games/village_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 225px;
-
-                                    @include sm{
-                                        width: 75%;
-                                    }
-                                    @include lg{
-                                        height: 275px;
-                                    }
-                            }
-
                         }
-                        li:nth-child(3){
-                            margin: -50px 0 0;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
+                        li:nth-child(3) {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                background-image: url("../img/games/endure_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 75px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-                            a{
-                                    background-image: url("../img/games/endure_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 200px;
-
-                                    @include sm{
-                                        width: 75%
-                                    }
-                            }
-
                         }
-                        li:nth-child(4){
-                            margin: -90px 0 -40px;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
-                                margin-top: -80px;
+                        li:nth-child(4) {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                background-image: url("../img/games/rain_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 75px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-                            a{
-                                    background-image: url("../img/games/rain_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 200px;
-
-                                    @include sm{
-                                        width: 75%
-                                    }
-                            }
-
                         }
                     }
                 }
@@ -109,31 +90,150 @@
         }
     }
 }
-#questions{
+
+#questions {
     background-color: $background;
-    div{
-        ul{
-            li{
-                .arrow-down{
+    margin-top: 55px;
+
+    div {
+        ul {
+            display: grid;
+            grid-template-areas: " . question-1 ." ". question-2 ." ". question-3 ." ". question-4 ." ". question-5 .";
+            grid-template-columns: 10px auto 10px;
+            @include md {
+                grid-template-columns: 10% auto 10%;
+            }
+            @include lg {
+                grid-template-columns: auto 900px auto;
+            }
+
+            li {
+                border-top: 1px solid $white;
+                padding-top: 5px;
+                text-align: center;
+
+                h1 {
+                    color: $white;
+                    font-size: rem-calc(18);
+                    @include md {
+                        font-size: rem-calc(25);
+                    }
+                    @include lg {
+                        font-size: rem-calc(32);
+                    }
+                }
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+
+                .arrow-down {
                     background-image: url("../img/nav/arrow-down.svg");
-                    height: 14px;
-                    width: 23px;;
-                    background-size: cover;
-                    background-repeat: no-repeat;
                     background-position: center;
-                }
-                .arrow-up{
-                    background-image: url("../img/nav/arrow-up.svg");
-                    height: 14px;
-                    width: 23px;;
-                    background-size: cover;
                     background-repeat: no-repeat;
-                    background-position: center;
+                    background-size: cover;
+                    height: 14px;
+                    width: 24px;
+                    @include lg {
+                        height: 24px;
+                        width: 40px;
+                    }
                 }
+
+                .arrow-down:active,
+                .arrow-down:hover {
+                    background-image: url("../img/nav/arrow-down-blue.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 14px;
+                    transition: 0.25s;
+                    width: 24px;
+                    @include lg {
+                        height: 24px;
+                        width: 40px;
+                    }
+                }
+
+                .collapsible-content {
+                    margin-bottom: 20px;
+
+                    p {
+                        font-size: rem-calc(14);
+                        text-align: left;
+                        @include md {
+                            font-size: rem-calc(16);
+                            text-align: center;
+                        }
+                        @include lg {
+                            font-size: rem-calc(22);
+                            line-height: rem-calc(29);
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            li:nth-child(1) {
+                border: none;
+                grid-area: question-1;
+                padding-top: 0;
+            }
+
+            li:nth-child(2) {
+                grid-area: question-2;
+            }
+
+            li:nth-child(3) {
+                grid-area: question-3;
+            }
+
+            li:nth-child(4) {
+                grid-area: question-4;
+            }
+
+            li:nth-child(5) {
+                grid-area: question-5;
             }
         }
     }
 }
-#faq-submit{
-    background-color: $background;
+
+#form {
+    div {
+        article {
+            @include md {
+                display: flex;
+                justify-content: center;
+            }
+
+            h1 {
+                color: $white;
+                font-size: rem-calc(18);
+                margin-bottom: 3px;
+                @include md {
+                    font-size: rem-calc(20);
+                    margin-bottom: 20px;
+                    padding-right: 5px;
+                }
+                @include lg {
+                    font-size: rem-calc(28);
+                }
+            }
+
+            h2 {
+                color: $white;
+                font-size: rem-calc(16);
+                margin-bottom: 20px;
+                @include md {
+                    font-size: rem-calc(20);
+                }
+                @include lg {
+                    font-size: rem-calc(28);
+                }
+            }
+        }
+    }
 }

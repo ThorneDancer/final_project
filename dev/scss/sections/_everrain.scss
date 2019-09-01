@@ -1,107 +1,88 @@
-#the-everrain{
+#the-everrain {
     background-color: $background;
-    button{
+
+    button {
+        animation: none;
         background-color: $background;
+        background-color: transparent;
         border: none;
         outline: none;
-        background-color: transparent;
-        animation: none;
-        div{
+
+        div {
             background-image: url("../img/nav/logo.png");
-            height: 35px;
-            width: 40px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            height: 35px;
             margin: 10px 0;
+            width: 40px;
         }
     }
-    #off-canvas-container{
-        div{
-            #nav-container{
-                nav{
-                    ul{
-                        li{
-                            font-size: rem-calc(20);
 
-                            @include md{
+    #off-canvas-container {
+        div {
+            #nav-container {
+                nav {
+                    ul {
+                        li {
+                            font-size: rem-calc(20);
+                            @include md {
                                 font-size: rem-calc(24);
                             }
-                            @include lg{
+                            @include lg {
                                 font-size: rem-calc(30);
                             }
                         }
 
-                        li:nth-child(2){
+                        li:nth-child(2) {
+                            display: flex;
+                            justify-content: center;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
+                            a {
+                                background-image: url("../img/games/village_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 100px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-
-                            @include md{
-                                margin-top: -10px;
-                            }
-
-                            a{
-                                    background-image: url("../img/games/village_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 225px;
-
-                                    @include sm{
-                                        width: 75%;
-                                    }
-                                    @include lg{
-                                        height: 275px;
-                                    }
-                            }
-
                         }
-                        li:nth-child(3){
-                            margin: -50px 0 0;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
+                        li:nth-child(3) {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                background-image: url("../img/games/endure_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 75px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-                            a{
-                                    background-image: url("../img/games/endure_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 200px;
-
-                                    @include sm{
-                                        width: 75%
-                                    }
-                            }
-
                         }
-                        li:nth-child(4){
-                            margin: -90px 0 -40px;
 
-                            @include sm{
-                                display: flex;
-                                justify-content: center;
-                                margin-top: -80px;
+                        li:nth-child(4) {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                background-image: url("../img/games/rain_logo.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 75px;
+                                width: 85%;
+                                @include sm {
+                                    width: 75%;
+                                }
                             }
-                            a{
-                                    background-image: url("../img/games/rain_logo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    width: 100%;
-                                    height: 200px;
-
-                                    @include sm{
-                                        width: 75%
-                                    }
-                            }
-
                         }
                     }
                 }
@@ -109,210 +90,125 @@
         }
     }
 }
-#everrain-hero{
+
+#everrain-hero {
     background-color: $background;
     background-image: url("../img/games/rain_logo.png");
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
     height: 110px;
+    margin-top: 15px;
     width: 100%;
-
-    @include sm{
+    @include sm {
         height: 140px;
     }
-    @include md{
+    @include md {
         height: 190px;
     }
-    @include lg{
+    @include lg {
         height: 230px;
     }
-    @include xl{
+    @include xl {
         height: 290px;
     }
 }
-#everrain-content{
-    text-align: justify;
+
+#everrain-content {
     background-color: $background;
+    padding-bottom: 40px;
+    text-align: justify;
+    @include xl {
+        display: grid;
+        grid-template-areas: ". everrain-content .";
+        grid-template-columns: auto 1100px auto;
+    }
 
-    @include xl{
-            display: grid;
-            grid-template-columns: auto 1170px auto;
-            grid-template-areas: ". everrain-content .";
+    div {
+        @include xl {
+            grid-area: everrain-content;
         }
-        div{
 
-            @include xl{
-                grid-area: everrain-content;
-            }
-        p{
+        p {
             color: $white;
             line-height: rem-calc(24);
-
-            @include sm{
+            @include sm {
                 font-size: rem-calc(18);
                 line-height: rem-calc(28);
             }
-            @include md{
+            @include md {
                 font-size: rem-calc(20);
                 line-height: rem-calc(33);
             }
-            @include lg{
-                text-align: left;
+            @include lg {
                 font-size: rem-calc(24);
                 line-height: rem-calc(38);
+                text-align: left;
             }
         }
-        p:nth-child(2){
 
-            @include md{
+        p:nth-child(2) {
+            @include md {
                 width: 55%;
             }
         }
-        aside{
+
+        aside {
             display: flex;
             justify-content: center;
 
-            button{
+            button {
                 font-size: rem-calc(25);
                 margin: 20px 0;
-
-                @include sm{
+                @include sm {
                     font-size: rem-calc(30);
                 }
-                @include lg{
+                @include lg {
                     font-size: rem-calc(35);
                 }
-                a{
-                    color: $white;
+
+                a {
                     border: 1px $white solid;
                     border-radius: 10px;
+                    color: $white;
                     padding: 10px;
                 }
-                a:hover,a:active{
-                    color: $orange;
+
+                a:active,
+                a:hover {
                     border-color: $orange;
+                    color: $orange;
                 }
             }
         }
-        }
+    }
 }
-// #everrain-video{
-//     background-color: $background;
-//     display: grid;
-//     grid-template-columns: 10px auto 10px;
-//     grid-template-areas: ". video .";
-//     height: 100vh;
-//
-//     // @include md{
-//     //     grid-template-columns: auto 70% auto;
-//     // }
-//     //
-//     // @include lg{
-//     //     grid-template-columns: auto 60% auto;
-//     // }
-//     //
-//     // @include xl{
-//     //     grid-template-columns: auto 50% auto;
-//     // }
-//
-//     article{
-//         grid-area: video;
-//         padding: 20vh 0;
-//     }
-// }
-// #everrain-hero{
-//     background-color: $background;
-//     background-image: url("../img/games/rain_logo.png");
-//     background-size: cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     height: 290px;
-//     width: 100%;
-//     margin-top: 55px;
-//
-//     @include sm{
-//         height: 420px;
-//     }
-//     @include md{
-//         height: 500px;
-//     }
-//     @include lg{
-//         height: 600px;
-//     }
-//     @include xl{
-//         height: 700px;
-//     }
-// }
-// #everrain-content{
-//     background-color: $background;
-//     text-align: justify;
-//
-//     @include xl{
-//         display: grid;
-//         grid-template-columns: auto 1170px auto;
-//         grid-template-areas: ". everrain-content .";
-//     }
-//     div{
-//
-//         @include xl{
-//             grid-area: everrain-content;
-//         }
-//     p{
-//         color: $white;
-//         line-height: rem-calc(24);
-//
-//         @include sm{
-//             font-size: rem-calc(18);
-//             line-height: rem-calc(28);
-//         }
-//         @include md{
-//             font-size: rem-calc(20);
-//             line-height: rem-calc(33);
-//         }
-//         @include lg{
-//             text-align: left;
-//             font-size: rem-calc(24);
-//             line-height: rem-calc(38);
-//         }
-//     }
-//     p:nth-child(2){
-//
-//         @include md{
-//             width: 55%;
-//         }
-//     }
-//     }
-//     }
-// }
-#everrain-video{
+
+#everrain-video {
     background-color: $background;
     display: grid;
-    grid-template-columns: 10px auto 10px;
     grid-template-areas: ". video .";
-    height: 100vh;
-
-    @include md{
-        grid-template-columns: auto auto 80% 10px;
+    grid-template-columns: 10px auto 10px;
+    height: 55vh;
+    padding-bottom: 40px;
+    @include md {
         grid-template-areas: ". . video .";
+        grid-template-columns: auto auto 80% 10px;
     }
-
-    @include lg{
-        grid-template-columns: auto 80% auto;
+    @include lg {
         grid-template-areas: ". video .";
+        grid-template-columns: auto 80% auto;
     }
-
-    @include xl{
+    @include xl {
         grid-template-columns: auto 70% auto;
     }
 
-    article{
+    article {
         grid-area: video;
         padding: 20px 0;
-
-        @include md{
-            padding: 0;
+        @include md {
             margin: -5px 0 0;
+            padding: 0;
         }
     }
 }

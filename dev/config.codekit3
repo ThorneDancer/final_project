@@ -202,6 +202,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/nav/arrow-down-blue.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/nav/arrow-down-blue.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/img/nav/arrow-down.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -250,8 +260,8 @@
 		"oA": 0,
 		"oAP": "/img/store/base_game.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -589,6 +599,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/scss/sections/_thanks.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/sections/_thanks.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/sections/_village.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -621,6 +644,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/store.html",
+		"oF": 0
+		},
+	"/thanks.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/thanks.html",
 		"oF": 0
 		},
 	"/village.html": {

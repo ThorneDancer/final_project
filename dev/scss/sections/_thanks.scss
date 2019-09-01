@@ -1,0 +1,49 @@
+#thanks {
+    background-color: $background;
+
+    div {
+        background-color: $background;
+        display: grid;
+        grid-template-areas: ". thx-img ." ". thank-you ." ". return .";
+        grid-template-columns: 20% auto 20%;
+        margin-top: 25px;
+
+        div {
+            display: flex;
+            grid-area: thx-img;
+            justify-content: center;
+
+            figure {
+                background-image: url("../img/nav/logo.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 55px;
+                margin: 10px 0;
+                width: 60px;
+            }
+        }
+
+        h1 {
+            color: $white;
+            font-size: rem-calc(35);
+            grid-area: thank-you;
+            text-align: center;
+        }
+
+        a {
+            background-color: $background;
+            border: 1px $white solid;
+            border-radius: 15px;
+            color: $white;
+            grid-area: return;
+            padding: 10px 0;
+        }
+
+        a:active,
+        a:hover {
+            border-color: $orange;
+            color: $orange;
+        }
+    }
+}
